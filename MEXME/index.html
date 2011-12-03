@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>MEXME - Diversi&oacute;n y solo eso.</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<style type="text/css">
+		body{
+			background-color: #ddd;
+			padding: 0;
+			margin: 0;
+			font: 12px "Helvetica Neue",Helvetica,Arial,sans-serif;
+		}
+		footer{
+			bottom: 0;
+			position: fixed;
+			background-color: #222;
+			width: 100%;
+			min-height: 30px;
+			color: #FFF;
+			border-top: solid #424242 1px;
+			-webkit-box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 1);
+			-moz-box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 1);
+			box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 1);
+		}
+		footer h1{
+			font-size: 18px;
+			float:left;
+			font-family: 'Arial', Gadget, sans-serif;
+			text-shadow: #000 1px 1px 0px;
+		}
+		footer ul{
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			overflow: hidden;
+			float: left;
+		}
+		footer li{
+			color: #999;
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 50px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			padding-left: 10px;
+			padding-right: 10px;
+			border-right: 1px solid #333;
+			box-shadow: -1px 0 #000 inset;
+			-moz-box-shadow: -1px 0 #000 inset;
+			-webkit-box-shadow: -1px 0 #000 inset;
+			text-shadow: 0 -1px #000;
+			display: inline;
+			-webkit-transition: background 0.5s ease-in;
+			-moz-transition: background 0.5s ease-in;
+			-o-transition: background 0.5s ease-in;
+			-ms-transition: background 0.5s ease-in;
+			transition: background 0.5s ease-in;
+		}
+		footer li:hover{
+			cursor:pointer;
+			-webkit-transition: background 0.5s ease-in;
+			-moz-transition: background 0.5s ease-in;
+			-o-transition: background 0.5s ease-in;
+			-ms-transition: background 0.5s ease-in;
+			transition: background 0.5s ease-in;
+			background: #1C1C1C;
+		}
+		footer li a{
+			color: #BDBDBD;
+			text-decoration: none;
+		}
+		footer li a:hover{
+			color: #E6E6E6;
+			text-decoration: none;
+		}
+		.contenedor{
+			margin: 0 auto 0 auto;
+			width: 950px;
+		}
+		.clear{
+			clear:both;
+		}
+		#iBuscar{
+			display: none;
+			top: 0;
+			position: fixed;
+			background-color: #222;
+			width: 100%;
+			min-height: 40px;
+			color: #FFF;
+			border-bottom: solid #424242 1px;
+			-webkit-box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 1);
+			-moz-box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 1);
+			box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 1);
+		}
+		#inputBuscar{
+			width: 800px;
+			font-weight: bold;
+			color: #000;
+			height: 15px;
+			font-size: 15px;
+			padding: 5px;
+			margin-top: 5px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+		}
+		#enviarBuscar{
+			display: none;
+		}
+		#botonCerrarBusqueda{
+			width: 20px; 
+			float:right; 
+			padding: 5px; 
+			margin-top: 5px;
+		}
+		#buscarImagen{
+			width: 25px; 
+			float:right; 
+			padding: 5px; 
+			padding-right: 75px;
+		}
+		.advertencia{
+			background-color: #F8FF5C;
+			border: solid #F3FF00 1px;
+			width: 950px;
+			margin: 10px auto 0 auto;
+			padding: 10px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+		}
+		.advertencia span{
+			color: #000;
+			text-shadow: 1px 1px 0px #FFF;
+		}
+		.advertencia a{
+			color: #B98500;
+			text-decoration: none;
+		}
+		.advertencia a:hover{
+			color: #483300;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#Buscar").click(function(){
+				$("#iBuscar").fadeIn('slow');
+			});
+			$("a#cerrarBusqueda").click(function(){
+				$("#iBuscar").fadeOut('slow');
+			});
+			$("a#cerrarAdvertencia").click(function(){
+				$(".advertencia").fadeOut('slow');
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<nav id="iBuscar">
+		<div class="contenedor">
+			<a href="#cerrarBusqueda" id="cerrarBusqueda" title="Cerrar panel de b&uacute;squeda"><img src="cerrar.png" id="botonCerrarBusqueda" alt="cerrar"/> </a>
+			<img src="buscar.png" id="buscarImagen" alt="buscar"/>
+			<form method="GET" action="Buscar">
+				<input type="text" id="inputBuscar" name="buscar" placeholder="Buscar..." />
+				<input type="submit" value="Enviar" id="enviarBuscar" />
+			</form>
+		</div>
+	</nav>
+	<header>
+		<div class="advertencia">
+			<a href="#cerrarAdvertencia" id="cerrarAdvertencia" style="float:right;">Cerrar</a>
+			<span>Advertencia: Este sitio es &uacute;nicamente de pruebas, el contenido del sitio est&aacute; escrito manualmente y el dise&ntilde;o est&aacute; basado en el dise&ntilde;o de <a href="http://9gag.com" title="9GAG - Just for fun!" target=_blank>9GAG</a>.  El c&oacute;digo ha sido creado por <a href="http://iasfo.co" title="iAsfo" target=_blank>iAsfo</a> (a excepci&oacute;n de jQuery) &copy; 2011</span>
+		</div>
+		<div class="clear">&nbsp;</div>
+		<div class="contenedor">
+			<img src="logo.png" alt="logo" />
+		</div>
+	</header>
+	<footer>
+		<div class="contenedor">
+			<h1>MEXME</h1>
+				<ul>
+					&nbsp;
+					<li><a href="#">&Uacute;ltimos</a></li>
+					<li><a href="#">Mejores</a></li>
+					<li><a href="#">Aleatorios</a></li>
+					<li><a href="#">Enviar</a></li>
+					<li><a href="#">Votar</a></li>
+				</ul>
+			<div style="float:right;">
+				<ul>
+					<li><a href="#abrirBusqueda" id="Buscar">Buscar</a></li>
+					<li><a href="#">Iniciar Sesi&oacute;n</a></li>
+					<li><a href="#">Ir Arriba &uarr;</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
