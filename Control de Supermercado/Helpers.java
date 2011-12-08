@@ -39,7 +39,14 @@ public class Helpers {
             return _returnInt;
         }
     }
-
+	/*
+	* Método: _getDoubleFromStringData(String Value);
+	* Parámetros:
+	* @Param = (String) Value;
+	* @Return = (Double) _returnDouble;
+	* Ayuda: Retorna el valor de una String introducida (por el usuario)
+	* y la convierte a doble.
+	*/
     public double _getDoubleFromStringData(String Value)
     {
         try
@@ -280,6 +287,12 @@ public class Helpers {
     }
     /*
      * Método: isCategory(int Value);
+	 * Parámetros:
+	 * @Param = (Int) Value;
+	 * @Return = true/false
+	 * Ayuda: Comprueba si es ono una categoría la seleccionada por el usuario
+	 * si no es una categoría retorna true, en caso de que si lo sea, retorna
+	 * false.
      */
     public boolean isNotCategory(int Value)
     {
