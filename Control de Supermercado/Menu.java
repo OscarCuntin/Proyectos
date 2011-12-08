@@ -79,29 +79,21 @@ public final class Menu extends Helpers{
         day = Integer.toString(_date.get(Calendar.DATE));
         //Comprobamos que no sea una fecha del 1 al 9 ya que retorna sin "0"
         //Y es más compleja la búsqueda del archivo en otra forma
-        if(day.equalsIgnoreCase("9"))
-            day = "09";
-        if(day.equalsIgnoreCase("8"))
-            day = "08";
-        if(day.equalsIgnoreCase("7"))
-            day = "07";
-        if(day.equalsIgnoreCase("6"))
-            day = "06";
-        if(day.equalsIgnoreCase("5"))
-            day = "05";
-        if(day.equalsIgnoreCase("4"))
-            day = "04";
-        if(day.equalsIgnoreCase("3"))
-            day = "03";
-        if(day.equalsIgnoreCase("2"))
-            day = "02";
-        if(day.equalsIgnoreCase("1"))
-            day = "01";
+        if(day.equalsIgnoreCase("9")) day = "09";
+        if(day.equalsIgnoreCase("8")) day = "08";
+        if(day.equalsIgnoreCase("7")) day = "07";
+        if(day.equalsIgnoreCase("6")) day = "06";
+        if(day.equalsIgnoreCase("5")) day = "05";
+        if(day.equalsIgnoreCase("4")) day = "04";
+        if(day.equalsIgnoreCase("3")) day = "03";
+        if(day.equalsIgnoreCase("2")) day = "02";
+        if(day.equalsIgnoreCase("1")) day = "01";
         //Se obtiene la demás información de la fecha ya obtenido el día
         month = Integer.toString(_date.get(Calendar.MONTH) + 1); //Mes
         year = Integer.toString(_date.get(Calendar.YEAR)); //Año
         fullDate = day+"/"+month+"/"+year; //Se arma la fecha en formato: DD/MM/YYYY
         _fullDate = day + "_" + month + "_" + year; //Se arma una sub-fecha en formato: DD_MM_YYYY
+		//Se arma la hora
         hour = _date.get(Calendar.HOUR_OF_DAY); //Hora actual
         minute = _date.get(Calendar.MINUTE); //Minuto actual
         seconds = _date.get(Calendar.SECOND); //Segundo actual
