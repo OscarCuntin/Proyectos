@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /> 
+	<title>Pastebin Fake</title>
+	<style type="text/css">
+		*{}
+		body{
+			margin: 0;
+			padding: 0;
+			background: url('bg.jpg') repeat;
+			font-family: arial;
+		}
+		#mensajeSuperior{
+			width: 100%;
+			height: 45px;
+			top: 0;
+			background: url('bg_superior.jpg') repeat-x;
+			-webkit-box-shadow: 0px 1px 6px 0px #000;
+			-moz-box-shadow: 0px 1px 6px 0px #000;
+			box-shadow: 0px 1px 6px 0px #000;
+			
+		}
+		.contenedor{
+			margin: 0 auto 0 auto;
+			width: 950px;
+		}
+		.contenidoMensajeSuperior{
+			width: 950px;
+			height: 20px;
+			background-color: #f5f9f9;
+			border: solid #b2c7cd 1px;
+			padding: 6px; 
+			color: #b1babf;
+			text-shadow: #FFF 0px 1px 0px;
+			margin-top: 5px;
+			float:left;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			background: #f5f9fa; 
+			background: -moz-linear-gradient(top, #f5f9fa 0%, #eaf2f5 99%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f9fa), color-stop(99%,#eaf2f5));
+			background: -webkit-linear-gradient(top, #f5f9fa 0%,#eaf2f5 99%); 
+			background: -o-linear-gradient(top, #f5f9fa 0%,#eaf2f5 99%); 
+			background: -ms-linear-gradient(top, #f5f9fa 0%,#eaf2f5 99%);
+			background: linear-gradient(top, #f5f9fa 0%,#eaf2f5 99%); 
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f9fa', endColorstr='#eaf2f5',GradientType=0 ); 
+		}
+		.clear{
+			clear:both;
+		}
+		header{
+			height: 100px;
+		}
+		header #logo{
+			font-size: 30px;
+			font-weight: bold;
+			color: #686a6b;
+			text-shadow: #FFF 0px 1px 0px;
+		}
+		header #logoSub{
+			font-size: 13px;
+			color: #686a6b;
+			text-shadow: #FFF 0px 1px 0px;
+		}
+		header #menu{
+			font-size: 13px;
+			color: #686a6b;
+			text-shadow: #FFF 0px 1px 0px;
+		}
+		header #menu a{
+			color: #686a6b;
+			text-decoration: none;
+		}
+		header #menu a:hover{
+			color: #3b3b3b;
+		}
+		#nuevoPaste{
+			background: url('bg_nuevo_paste.jpg') repeat;
+			height: 20px;
+			padding: 20px;
+			border: solid #848484 1px;
+			-webkit-border-top-left-radius: 10px;
+			-webkit-border-top-right-radius: 10px;
+			-moz-border-radius-topleft: 10px;
+			-moz-border-radius-topright: 10px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+		#nuevoPaste span{
+			font-size: 12px;
+			background: #222222;
+			border: solid #5b5b5b 1px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			padding: 10px;
+			color: #c8c8c8;
+			/*text-shadow: #919191 0px 1px 0px;*/
+		}
+		footer{
+			font-size: 13px;
+			text-align: center;
+			color: #686a6b;
+			text-shadow: #FFF 0px 1px 0px;
+		}
+		footer hr{
+			height: 1px;
+			background-color: #A4A4A4;
+			border:none;
+		}
+	</style>
+</head>
+<body>
+	<div id="mensajeSuperior">
+		<div class="contenedor">
+			<div class="contenidoMensajeSuperior">
+				<span style="float:left;">Esto es una p&aacute;gina de <b>pruebas</b> &uacute;nicamente...</span><span style="float:right;"><a href="#cerrarMensajeSuperior"><img src="cerrar.gif" /></a></span>
+			</div>
+		</div>
+	</div>
+	<div class="clear">&nbsp;</div>
+	<header>
+		<div class="contenedor">
+			<div style="float:left;">
+				<div id="logo">Pastebin</div>
+				<span id="logoSub">Una sorprendente aplicaci&oacute;n <b>fake</b></span>
+			</div>
+			<div style="float:right;">
+				<div id="menu">
+					<a href="#nuevoPaste">Crear nuevo Paste</a> | <a href="#ayuda">Ayuda</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section id="contenido">
+		<div class="contenedor">
+			<div id="nuevoPaste">
+				<div style="float:left;">
+					<span>Crea un nuevo paste</span>
+					<span>El paste <b>no</b> se guardar&aacute;</span>
+				</div>
+				<div style="float:right;">
+					<span>Iniciar Sesi&oacute;n | Registrarse</span>
+				</div>
+			</div>
+			<div id="nuevoPasteContenido">
+				<textarea style="width: 944px; min-height: 200px; margin-top: -1px;" placeholder="Pega aqu&iacute; tu Paste"></textarea>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="contenedor">
+			<hr />
+			Copyright &copy; 2011 <b>iAsfo</b>
+		</div>
+	</footer>
+</body>
+</html>
