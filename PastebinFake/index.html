@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /> 
 	<title>Pastebin Fake</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<style type="text/css">
 		*{}
 		body{
@@ -111,12 +112,19 @@
 			border:none;
 		}
 	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#cerrarMensajeSuperior").click(function(){
+				$("#mensajeSuperior").slideUp('slow');
+			});
+		});
+	</script>
 </head>
 <body>
 	<div id="mensajeSuperior">
 		<div class="contenedor">
 			<div class="contenidoMensajeSuperior">
-				<span style="float:left;">Esto es una p&aacute;gina de <b>pruebas</b> &uacute;nicamente...</span><span style="float:right;"><a href="#cerrarMensajeSuperior"><img src="cerrar.gif" /></a></span>
+				<span style="float:left;">Esto es una p&aacute;gina de <b>pruebas</b> &uacute;nicamente...</span><span style="float:right;"><a href="#cerrarMensajeSuperior" id="cerrarMensajeSuperior"><img src="cerrar.gif" alt="cerrar"/></a></span>
 			</div>
 		</div>
 	</div>
