@@ -178,39 +178,77 @@
 			outline: 0;
 		}
 		.botonEnviarNota {
-			
+			font:14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-weight:bold;
+			color: #AAA;
+			padding:8px;
+			margin:0 auto;
+			text-decoration: none;
+			width:120px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			-webkit-box-shadow: 0px 1px 1px #edddd8;
+			-moz-box-shadow: 0px 1px 1px #edddd8;
+			text-shadow: 0px 1px 0px #ffffff;
+			border: solid #ccc 1px;
+			background: url(btn.png) left top repeat-x;
 		}
 		.botonEnviarNota:hover {
 			cursor:pointer;
+			background: url(btn.png) left -40px repeat-x;
 		}
 		.botonEnviarNota:active{
-			
+			position:relative;
+			top:1px;
+		}
+		.success
+		{
+			font-family: Arial, Helvetica, clean, sans-serif;
+			font-size: 18px;
+			font-weight: bold;
+			background-color: #acfa58;
+			color: #000;
 		}
 	</style>
 	<script src="jquery.elastic.source.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jquery.dropkick-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jquery.showMessage.js" type="text/javascript" charset="utf-8"></script>
+	<script src="prettify.js" type="text/javascript" charset="utf-8"></script>
+	<link href="prettify.css" type="text/css" rel="stylesheet" />
+	<link href="dropkick.css" type="text/css" rel="stylesheet" />
+	<link href="blank_theme.css" type="text/css" rel="stylesheet" />
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$("#cerrarMensajeSuperior").click(function(){
+			/*$("#cerrarMensajeSuperior").click(function(){
 				$("#mensajeSuperior").slideUp('slow');
-			});
-			$("#iniciarSesion").click(function(){
-				$("#mensajeSuperior").slideUp('slow', function(){
-					$("#mensaje").html("<form action=\"\" method=\"POST\"><b>Usuario:</b><input type=\"text\" name=\"usuario\" class=\"caja\"/> <b>Contrase&ntilde;a:</b><input type=\"password\" name=\"contrasena\" class=\"caja\"/><input type=\"submit\" value=\"Enviar\" class=\"botonEnviar\"/></form>");
-					$("#mensajeSuperior").slideDown('slow');
+			});*/
+			$("#enviar").click(function(){
+				var titulo = $("#titulo").val();
+				var paste = $("#paste").val();
+				var lenguaje = $("#lenguaje").val();
+				jQuery('body').showMessage({
+					'thisMessage'      :	    ['Se creó tu iNota, en un momento ser&aacute;s redirigido a ella...'],
+					'className'        :		'success',
+					'opacity'  		   :		95,
+					'displayNavigation':	    false,
+					'autoClose'		   :		true,
+					'delayTime'		   :		3000
 				});
+				return false;
 			});
 			jQuery('#paste').elastic();
+			$('select').dropkick();
 		});
 	</script>
 </head>
-<body>
-	<div id="mensajeSuperior">
+<body onload="prettyPrint()">
+	<!--<div id="mensajeSuperior">
 		<div class="contenedor">
 			<div class="contenidoMensajeSuperior">
 				<span style="float:left;" id="mensaje">Esto es una p&aacute;gina de <b>pruebas</b> &uacute;nicamente...</span><span style="float:right;"><a href="#cerrarMensajeSuperior" id="cerrarMensajeSuperior"><img src="cerrar.gif" alt="cerrar"/></a></span>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	<div class="clear">&nbsp;</div>
 	<header>
 		<div class="contenedor">
@@ -242,11 +280,28 @@
 					<img src="notas_top.jpg" alt="top" style="margin-top: -6px; margin-left: 0px; border-left: solid rgb(202, 207, 213) 1px;  border-right: solid rgb(202, 207, 213) 1px; " />
 					<textarea id="paste" placeholder="Escribe aqu&iacute; tu iNota"></textarea>
 					<img src="bottom_paste.jpg" alt="bottom" style="margin-top: -6px; margin-left: -1px;"/>
-					<input type="submit" class="botonEnviarNota" value="Enviar iNota"/>
+					<div style="float:left;">
+						<span style="font-size:12px; color: #AAA; font-weight: bold; text-shadow: #DDD 0px 1px 0px;">Lenguaje:</span><br />
+						<select name="lenguaje" id="lenguaje" tabindex="1" class="pretty dk">
+							<option value="sin-codigo">Sin Lenguaje</option>
+							<option value="html">HTML</option>
+							<option value="css">CSS</option>
+							<option value="javascript">Javascript</option>
+							<option value="php">PHP</option>
+							<option value="sql">SQL</option>
+						</select>
+					</div>
+					<div style="float:right;">
+						<span style="font-size:12px; color: #AAA; font-weight: bold; text-shadow: #DDD 0px 1px 0px;">T&iacute;tulo:</span><br />
+						<input type="text" name="titulo" id="titulo" style="background:#fff; outline:none; -moz-box-shadow:inset 0 1px 1px #f2f2f2; width:216px; font:12px 'Helvetica Neue', Helvetica, Arial, sans-serif; padding:7px; margin:0 0 15px 0; -webkit-box-shadow:inset 0 1px 1px #f2f2f2; box-shadow:inset 0 1px 1px #f2f2f2; color:#888; border:1px solid #cdcdce;" />	
+						<input type="submit" class="botonEnviarNota" id="enviar" value="Enviar iNota"/><br />
+					</div>
+					
 				</form>
 			</div>
 		</div>
 	</section>
+	<div class="clear">&nbsp;</div>
 	<footer>
 		<div class="contenedor">
 			<hr />
