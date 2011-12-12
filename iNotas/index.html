@@ -6,6 +6,9 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<style type="text/css">
 		*{}
+		img{
+			border:none;
+		}
 		body{
 			margin: 0;
 			padding: 0;
@@ -76,6 +79,7 @@
 		}
 		header #menu a:hover{
 			color: #3b3b3b;
+			text-decoration: underline;
 		}
 		#nuevoPaste{
 			background: url('bg_nuevo_paste.jpg') repeat;
@@ -88,6 +92,7 @@
 			-moz-border-radius-topright: 10px;
 			border-top-left-radius: 10px;
 			border-top-right-radius: 10px;
+			color: #c8c8c8;
 		}
 		#nuevoPaste span{
 			font-size: 12px;
@@ -100,6 +105,20 @@
 			color: #c8c8c8;
 			/*text-shadow: #919191 0px 1px 0px;*/
 		}
+		#nuevoPaste a{
+			font-size: 12px;
+			background: #222222;
+			border: solid #5b5b5b 1px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			padding: 10px;
+			color: #c8c8c8;
+			text-decoration: none;
+		}
+		#nuevoPaste a:hover{
+			text-decoration: underline;
+		}
 		footer{
 			font-size: 13px;
 			text-align: center;
@@ -111,11 +130,76 @@
 			background-color: #A4A4A4;
 			border:none;
 		}
+		.caja{
+			height: 18px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			border: solid #A4A4A4 1px;
+			color: #b1babf;
+			text-shadow: #FFF 0px 1px 0px;
+		}
+		.caja:hover{
+			-webkit-box-shadow: 0px 0px 1px 0px #000;
+			-moz-box-shadow: 0px 0px 1px 0px #000;
+			box-shadow: 0px 0px 1px 0px #000;
+		}
+		.botonEnviar{
+			background: #f5f9fa; 
+			background: -moz-linear-gradient(top, #f5f9fa 0%, #eaf2f5 99%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f9fa), color-stop(99%,#eaf2f5));
+			background: -webkit-linear-gradient(top, #f5f9fa 0%,#eaf2f5 99%); 
+			background: -o-linear-gradient(top, #f5f9fa 0%,#eaf2f5 99%); 
+			background: -ms-linear-gradient(top, #f5f9fa 0%,#eaf2f5 99%);
+			background: linear-gradient(top, #f5f9fa 0%,#eaf2f5 99%); 
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f9fa', endColorstr='#eaf2f5',GradientType=0 ); 
+			height: 22px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			border: solid #A4A4A4 1px;
+			cursor: pointer;
+			color: #b1babf;
+			text-shadow: #FFF 0px 1px 0px;
+		}
+		.botonEnviar:hover{
+			color: #000;
+			-webkit-box-shadow: 0px 0px 1px 0px #000;
+			-moz-box-shadow: 0px 0px 1px 0px #000;
+			box-shadow: 0px 0px 1px 0px #000;
+		}
+		#paste{
+			width: 886px; 
+			min-height: 200px; 
+			padding-top: 15px;
+			padding-left: 60px;
+			border-left: solid rgb(202, 207, 213) 1px; 
+			border-right: solid rgb(202, 207, 213) 1px; 
+			border-bottom: none; 
+			margin-top:0px; 
+			background:url('bg_paste_area.jpg');
+		}
 	</style>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#cerrarMensajeSuperior").click(function(){
 				$("#mensajeSuperior").slideUp('slow');
+			});
+			$("#iniciarSesion").click(function(){
+				$("#mensajeSuperior").slideUp('slow', function(){
+					$("#mensaje").html("<form action=\"\" method=\"POST\"><b>Usuario:</b><input type=\"text\" name=\"usuario\" class=\"caja\"/> <b>Contrase&ntilde;a:</b><input type=\"password\" name=\"contrasena\" class=\"caja\"/><input type=\"submit\" value=\"Enviar\" class=\"botonEnviar\"/></form>");
+					$("#mensajeSuperior").slideDown('slow');
+				});
+			});
+			$("#paste").focus(function(){
+				$(this).animate({
+					height: '350px',
+				}, 'slow');
+			});
+			$("#paste").focusout(function(){
+				$(this).animate({
+					height: '200px',
+				}, 'slow');
 			});
 		});
 	</script>
@@ -124,7 +208,7 @@
 	<div id="mensajeSuperior">
 		<div class="contenedor">
 			<div class="contenidoMensajeSuperior">
-				<span style="float:left;">Esto es una p&aacute;gina de <b>pruebas</b> &uacute;nicamente...</span><span style="float:right;"><a href="#cerrarMensajeSuperior" id="cerrarMensajeSuperior"><img src="cerrar.gif" alt="cerrar"/></a></span>
+				<span style="float:left;" id="mensaje">Esto es una p&aacute;gina de <b>pruebas</b> &uacute;nicamente...</span><span style="float:right;"><a href="#cerrarMensajeSuperior" id="cerrarMensajeSuperior"><img src="cerrar.gif" alt="cerrar"/></a></span>
 			</div>
 		</div>
 	</div>
@@ -132,12 +216,12 @@
 	<header>
 		<div class="contenedor">
 			<div style="float:left;">
-				<div id="logo">Pastebin</div>
-				<span id="logoSub">Una sorprendente aplicaci&oacute;n <b>fake</b></span>
+				<div id="logo">iNotas</div>
+				<span id="logoSub">Guarda tus notas y comp&aacute;rtelas con el mundo.</span>
 			</div>
 			<div style="float:right;">
 				<div id="menu">
-					<a href="#nuevoPaste">Crear nuevo Paste</a> | <a href="#ayuda">Ayuda</a>
+					<a href="#nuevoPaste">Crear nueva iNota</a> | <a href="#ayuda">Ayuda</a>
 				</div>
 			</div>
 		</div>
@@ -146,15 +230,20 @@
 		<div class="contenedor">
 			<div id="nuevoPaste">
 				<div style="float:left;">
-					<span>Crea un nuevo paste</span>
-					<span>El paste <b>no</b> se guardar&aacute;</span>
+					<span>Crea una nueva iNota</span>
+					<span>La iNota <b>no</b> se guardar&aacute;</span>
 				</div>
 				<div style="float:right;">
-					<span>Iniciar Sesi&oacute;n | Registrarse</span>
+					<a href="#iniciarSesion" id="iniciarSesion">Iniciar Sesi&oacute;n</a> | 
+					<a href="#Registrarse">Registrarse</a>
 				</div>
 			</div>
 			<div id="nuevoPasteContenido">
-				<textarea style="width: 944px; min-height: 200px; margin-top: -1px;" placeholder="Pega aqu&iacute; tu Paste"></textarea>
+				<form action="" method="POST">
+					<textarea id="paste" placeholder="Escribe aqu&iacute; tu iNota"></textarea>
+				<img src="bottom_paste.jpg" alt="bottom" style="margin-top: -6px; margin-left: -1px;"/>
+				<input type="submit" value="Enviar iNota"/>
+				</form>
 			</div>
 		</div>
 	</section>
