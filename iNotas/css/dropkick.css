@@ -68,7 +68,7 @@ border-radius: 2px;
   z-index: 10;
 }
   .dk_open .dk_toggle {
-background: #fff url('dk_arrows.png') 213px center no-repeat;
+	background: #fff url('dk_arrows.png') 213px center no-repeat;
   }
 
 /* The outer container of the options */
