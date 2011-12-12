@@ -1299,10 +1299,10 @@ public final class Menu extends Helpers{
                                //Si es una categoría, pedimos el código
                                 if(isNotCategory(categoryList)==false)
                                     //Se obtiene el código del objeto introducido por el usuario
-                                    itemToSearch = _getStringData("Código:");
+                                    categoryList = categoryList;
                                //Si no lo es, demostramos que la categoría está incorrecta y por lo tanto no existirá ningún artículo
                                 else
-                                    category = 26;
+                                    categoryList = 26;
                            switch(categoryList){
                                case 1:
                                    _print("Nombre     |     Precio       |       Código\n" + _GetList.electronics());

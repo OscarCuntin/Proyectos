@@ -46,7 +46,7 @@ public class Database extends Helpers{
      *  encontrado en la base de datos de línea blanca, si no
      *  es retornado con error ""
      */
-	public String whiteLine(String Value)
+    public String whiteLine(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -68,7 +68,7 @@ public class Database extends Helpers{
         return _returnData;
     }
     
-	public String Furniture(String Value)
+    public String Furniture(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -90,7 +90,7 @@ public class Database extends Helpers{
         return _returnData;
     }
     
-	public String White(String Value)
+    public String White(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -112,7 +112,7 @@ public class Database extends Helpers{
         return _returnData;
     }
  
-	public String Home(String Value)
+    public String Home(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -134,7 +134,7 @@ public class Database extends Helpers{
         return _returnData;
     }
   
-	public String DiscMovies(String Value)
+    public String DiscMovies(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -156,7 +156,7 @@ public class Database extends Helpers{
         return _returnData;
     }
    
-	public String Books(String Value)
+    public String Books(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -178,7 +178,7 @@ public class Database extends Helpers{
         return _returnData;
     }
     
-	public String Ferretera(String Value)
+    public String Ferretera(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -200,7 +200,7 @@ public class Database extends Helpers{
         return _returnData;
     }
      
-	public String Lotions(String Value)
+    public String Lotions(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -222,7 +222,7 @@ public class Database extends Helpers{
         return _returnData;
     }
       
-	public String Pharmacy(String Value)
+    public String Pharmacy(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -244,7 +244,7 @@ public class Database extends Helpers{
         return _returnData;
     }
        
-	public String Stationary(String Value)
+    public String Stationary(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -266,7 +266,7 @@ public class Database extends Helpers{
         return _returnData;
     }
 
-	public String Garden(String Value)
+    public String Garden(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -289,7 +289,7 @@ public class Database extends Helpers{
     }
          
          
-	public String Toys(String Value)
+    public String Toys(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -311,7 +311,7 @@ public class Database extends Helpers{
         return _returnData;
     }
           
-	public String Sports(String Value)
+    public String Sports(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -333,7 +333,7 @@ public class Database extends Helpers{
         return _returnData;
     }
            
-	public String Gifts(String Value)
+    public String Gifts(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -355,7 +355,7 @@ public class Database extends Helpers{
         return _returnData;
     }
             
-	public String Cloth(String Value)
+    public String Cloth(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -377,7 +377,7 @@ public class Database extends Helpers{
         return _returnData;
     }
              
-	public String Fruits(String Value)
+    public String Fruits(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -399,7 +399,7 @@ public class Database extends Helpers{
         return _returnData;
     }
               
-	public String Fish(String Value)
+    public String Fish(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -421,7 +421,7 @@ public class Database extends Helpers{
         return _returnData;
     }
                
-	public String Meat(String Value)
+    public String Meat(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -443,7 +443,7 @@ public class Database extends Helpers{
         return _returnData;
     }
                 
-	public String Salch(String Value)
+    public String Salch(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -465,7 +465,7 @@ public class Database extends Helpers{
         return _returnData;
     }
                 
-	public String Breat(String Value)
+    public String Breat(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -487,7 +487,7 @@ public class Database extends Helpers{
         return _returnData;
     }
                  
-	public String Masa(String Value)
+    public String Masa(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -510,7 +510,7 @@ public class Database extends Helpers{
     }
                   
  
-	public String Chesse(String Value)
+    public String Chesse(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
@@ -532,7 +532,7 @@ public class Database extends Helpers{
         return _returnData;
     }
 
-	public String Milk(String Value)
+    public String Milk(String Value)
     {
         String _returnData = "";
         //j = 0 | Nombre del producto
