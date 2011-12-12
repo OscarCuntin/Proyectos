@@ -1,0 +1,253 @@
+body { -webkit-background-size: auto; color:#b39265 }
+p { margin:1em 0; }
+
+#header { padding-top:122px }
+#header .pandaria-logo { display:block; width:330px; height:125px; position:absolute; top:85px; left:333px }
+#header .search-bar { display:none }
+#header .back-to-community { height:70px; margin-right:85px }
+#header .back-to-community a:hover { background-position:0 -40px }
+#content { background: none !important; }
+#content .content-trail { padding: 150px 0 0 65px; }
+#content .content-top { background-image:none }
+#content .content-bot { background:none; margin-bottom: 300px; line-height:1.8em }
+#content .summary { font-size:14px; line-height: 1.8em; }
+#content .desc { margin-top:50px }
+#footer { background: none; width:1006px; margin:-330px auto; position:relative; z-index:1}
+.pandaria #footer, .pandaria-sub-media #footer { margin-top:0}
+.pandaria-sub .footer-wrapper { background-color:#010a0f; position:relative }
+
+#wrapper #content h3 { font:normal 36px/1.1 Palatino Linotype; color:#008467; }
+#wrapper #content h3 small { color: #95703d; display: block; font-size: 12px; font-family: Arial, sans-serif; letter-spacing: normal; text-transform: uppercase; padding-top: 15px; }
+#wrapper h4 { font:normal 22px/2 Arial; color:#e2c7a3 }
+#wrapper h5 { font:bold 17px/1.5 Palatino Linotype; color:#001f00; text-shadow:  3px 3px 3px #fee6c1, 3px 3px 15px #fee6c1, 3px 3px 15px #fee6c1; }
+#wrapper h6{ font:normal 20px/1.8 Arial; color:#e2c7a3 }
+#wrapper .category { margin:15px 0  25px 65px }
+#wrapper-bottom { position:relative }
+
+.ui-breadcrumb li { background-position:98% -184px }
+.left { float:left } 
+.right { float:right } 
+
+/*menu*/
+#menu { width: 900px; height: 60px; position: absolute; left: 51px; top: 20px; -moz-user-select: none; -webkit-user-select: none; user-select: none; background:url("../../../images/game/mist-of-pandaria/backgrounds/bg-navi.jpg") no-repeat }
+#menu li { width: 150px; float: left; height: 60px; }
+#menu li a { height: 60px; display: block; }
+#menu li a:hover,
+#menu li a.menu-active {  background:url("../../../images/game/mist-of-pandaria/backgrounds/bg-navi.jpg") no-repeat; background-position: 0 -60px; position: relative; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow:none }
+#menu li.pandaria-menu-home a:hover { background-position: 0 -60px }
+#menu li.pandaria-menu-home a.menu-active { background-position: 0 -120px !important }
+#menu li.pandaria-menu-feature a:hover { background-position: -150px -60px }
+#menu li.pandaria-menu-feature a.menu-active { background-position: -150px -120px !important }
+#menu li.pandaria-menu-pandaren a:hover { background-position: -300px -60px }
+#menu li.pandaria-menu-pandaren a.menu-active { background-position: -300px -120px !important }
+#menu li.pandaria-menu-monk a:hover { background-position: -450px -60px }
+#menu li.pandaria-menu-monk a.menu-active { background-position: -450px -120px !important }
+#menu li.pandaria-menu-media a:hover { background-position: -600px -60px }
+#menu li.pandaria-menu-media a.menu-active { background-position: -600px -120px !important }
+#menu li.pandaria-menu-forum a:hover { background-position: -750px -60px }
+#menu li.pandaria-menu-forum a.menu-active { background-position: -750px -120px !important }
+
+/*main page*/
+.pandaria #content .content-bot { height: 1450px; }
+.pandaria #panda-wrapper { position:absolute; left:-244px; top:279px }
+.ff .pandaria #panda-wrapper {left:-245px;}
+.pandaria #incense-wrapper { position:absolute; left:182px; top:1519px; }
+.pandaria-sub #incense-wrapper { position:absolute; left:182px; bottom: 174px; }
+.pandaria-sub-media #incense-wrapper { position:absolute; left:182px; top:1282px; }
+.pandaria .wrapper-bottom { background:none }
+.pandaria .main-feature { width:245px; height:410px; float:right; margin-right:47px; padding:65px  25px 0}
+.pandaria .main-feature .latest-updates { margin-bottom:15px }
+.pandaria .main-feature .latest-updates a, .feature .update .latest-updates a { width:241px; height:60px; margin-top:4px; display:block }
+.pandaria .main-feature .latest-updates a:hover, .feature .update .latest-updates a:hover { cursor:pointer; background-position:0 -60px }
+.pandaria .main-feature .latest-updates  span, .feature .update .latest-updates  span { font-size:14px; position:relative; top:27px; left:13px }
+.pandaria .main-feature .latest-updates .feature-1, .feature .update .latest-updates .feature-1 { background:url("../../../images/game/mist-of-pandaria/update-1.jpg") no-repeat; }
+.pandaria .main-feature .latest-updates .feature-2, .feature .update .latest-updates .feature-2{ background:url("../../../images/game/mist-of-pandaria/update-2.jpg") no-repeat; }
+.pandaria .main-feature .video-thumb,
+.pandaria .main-feature .video-thumb .no-flash { width:239px; height:116px; display:block; }
+.pandaria .main-feature .video-thumb { background:url("../../../images/game/mist-of-pandaria/video-placeholder.jpg") no-repeat; }
+.pandaria .main-feature .video-thumb .no-flash { background:url("../../../images/game/mist-of-pandaria/video-thumb.jpg") no-repeat; }
+.pandaria .main-feature .video-thumb .no-flash:hover { background-position: left bottom; }
+
+
+
+.pandaria .bottom {  }
+.pandaria .bottom .left{ float:left; width:425px; height:410px; margin: 65px 0 0 65px }
+.pandaria .bottom .left h2 { width:350px }
+.pandaria .bottom p{ margin:2em 0 }
+.pandaria .bottom .right{ float:right; width:450px; height:410px; margin: 65px 0 0; position:relative }
+.pandaria .bottom .right li { margin-top:6px }
+.pandaria .bottom .monk:hover  { background-position:-249px 0 }
+.pandaria .bottom .monk  a { display:block; width:148px; height:148px; display:block; margin:20px 0 0 50px; }
+.pandaria .bottom .pandaren:hover  { background-position:-249px -200px }
+.pandaria .bottom .pandaren a { display:block; width:148px; height:148px; display:block; margin:20px 0 0 50px; }
+.pandaria .bottom .talent-calculator:hover  { background-position:-249px -400px }
+.pandaria .bottom .talent-calculator a { display:block; width:148px; height:148px; display:block; margin:20px 0 0 50px; }
+
+.pandaria .media-section { margin: 0 55px 0 45px  }
+.pandaria .media-section h6 { margin:30px 0 0 70px }
+.pandaria .media-section .frame .picture-wrapper { width:365px; height:225px; margin:16px 0 0 47px; position:relative }
+.pandaria .media-section .frame .picture-wrapper #artwork-1, .pandaria .media-section .frame .picture-wrapper #screenshot-1 { display:block }
+.pandaria .media-section .frame .picture { height:225px; width:365px; position:absolute; display:none }
+.pandaria .media-section .frame .picture:hover { background-position:0 -100% !important}
+.pandaria .media-section .frame .show { display:block }
+.pandaria .media-section .frame .thumb-wrapper { height: 45px; margin: 19px 0 0 53px; overflow: hidden; width:360px; position:relative }
+.pandaria .media-section .frame .thumb-wrapper #artwork-thumb { width:800px; position:relative; left:0 }
+.pandaria .media-section .frame .thumb-wrapper #artwork-thumb a:hover span { background-position:0 -100% }
+.pandaria .media-section .frame .thumb-wrapper #screenshot-thumb { width:800px; position:relative; left:0 }
+.pandaria .media-section .frame .thumb-wrapper #screenshot-thumb a:hover span { background-position:0 -100% }
+.pandaria .media-section .frame .thumb-wrapper #artwork-thumb span { width:76px; margin-right:15px; display:block; float:left; height:45px; background-color:#fff;
+	-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; }
+.pandaria .media-section .frame .thumb-wrapper #screenshot-thumb span { width:76px; margin-right:15px; display:block; float:left; height:45px; background-color:#fff;
+	-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; }
+.pandaria .media-section .frame #thumbs #thumb-frame { width:76px; height:45px; position:relative; background-color:red }
+.pandaria .media-section .artwork { float:left }
+.pandaria .media-section .screenshot { float:right }
+.pandaria .media-section .button-section { position:relative; top:18px; left:171px; width:116px; height:29px }
+.pandaria .media-section .button-section #button-left:hover { background-position:-475px -322px }
+.pandaria .media-section .button-section #button-right:hover { background-position:-548px -322px}
+
+/*sub-page*/
+.ie7 .pandaria-sub {  background-attachment:fixed;}
+.pandaria-sub .section-left { float:left; width:400px; margin-left:65px }
+.pandaria-sub .section-right { float:right; width:400px; margin-right:85px; }
+.pandaria-sub .desc,
+.pandaria-sub .other-news { position: relative; } /*bottom flash overlay fix*/
+
+/*pandaren*/
+.pandaria-sub.pandaren #content .content-bot { height:2000px !important }
+.pandaria-sub.pandaren .ss-wrapper { position:relative; top:30px; display:block }
+.pandaria-sub.pandaren .content-top .pararen-model #pararen-model{ position:relative; top:-14px; left:-20px }
+.pandaria-sub.pandaren .desc { padding-top: 30px; }
+.pandaria-sub.pandaren .ss-wrapper:hover .pandaren-ss-01, .pandaria-sub .ss-wrapper:hover .pandaren-ss-02 { background-position:0 -249px }
+
+/*monk*/
+.pandaria-sub.monk #content .content-bot { height:1700px !important }
+.pandaria-sub.monk  .ss-wrapper { position:relative; top:80px; display:block }
+.pandaria-sub .basic-info ul { width:330px; }
+.pandaria-sub .basic-info li { background: url("../../../images/icons/bullet2.gif") no-repeat 2px 4px; clear: both; font-size: 12px; margin: 0; padding: 0 0 17px 17px !important; }
+.pandaria-sub .basic-info li .basic-info-title { color: #CAAC84; display: block; font-size: 14px; text-transform: uppercase;  font-weight: bold; }
+.pandaria-sub .basic-info li .icon-frame-gloss { cursor: help; }
+.pandaria-sub.monk .desc { margin-top: 140px !important; position: relative; z-index: 2;}
+.pandaria-sub.monk .ss-wrapper:hover .monk-ss-01, .pandaria-sub .ss-wrapper:hover .monk-ss-02 { background-position:0 -249px }
+
+/*feature*/
+.pandaria-sub.feature #content .content-bot { height:1800px }
+.feature .section-left { margin-left:50px }
+.feature .section-right { margin-right:60px }
+.feature .section-right, .feature .section-left { margin-top:20px; margin-bottom:40px; } 
+.feature .section-left { width:430px }
+.feature .section-right { width:430px }
+.feature .subcategory { color: #8f6338 !important; background: url("../../../images/game/mist-of-pandaria/line.png") left bottom no-repeat;  }
+.feature .feature-list.none-opened { opacity: 0.5; }
+.feature .feature-list.none-opened, .feature .feature-list.none-opened span {cursor:default;}
+.feature .feature-list:hover .feature-list-title, .feature .feature-list:hover .feature-list-desc, .feature .feature-list:hover .leran-more { color:#fff }
+.feature .feature-list.pandaren { background-position: -10px 0 }
+.feature .feature-list.pandaren:hover { background-position: -10px -1400px }
+.feature .feature-list.monk { background-position: -10px -200px }
+.feature .feature-list.monk:hover { background-position: -10px -1600px }
+.feature .feature-list.zone { background-position: -10px -400px }
+.feature .feature-list.zone:hover { background-position: -10px -1800px }
+.feature .feature-list.scenario { background-position: -10px -600px }
+.feature .feature-list.talent-calculator { background-position: -10px -800px }
+.feature .feature-list.talent-calculator:hover { background-position: -10px -2200px }
+.feature .feature-list.challenge-mode { background-position: -10px -1000px }
+.feature .feature-list.challenge-mode:hover { background-position: -10px -2400px }
+.feature .feature-list.pet-battle { background-position: -10px -1200px }
+.feature .feature-list.pet-battle:hover { background-position: -10px -2600px }
+.feature .feature-list-title { font-size:20px; color:#e2c7a3; padding-right: 10px; }
+.feature .feature-list-desc { display:block; color:#b39265; line-height:1.5em; padding: 6px 0; }
+.feature .feature-list .comming-soon { color:#aa1311 }
+.feature .feature-list .leran-more { color:#FFB100; background: url("../../../images/icons/more-arrows.gif") no-repeat 90% 1px; padding-right:25px;  }
+.feature .feature-list:hover .leran-more { background-position: 90% -46px }
+.feature .update .update-wrapper { margin:79px 0 0 53px; }
+.feature .update .latest-updates { margin-bottom:15px }
+.feature .content-bot ul h4 { color:#a17a45 !important }
+.feature .content-bot ul { margin-left: 100px; }
+.feature .content-bot ul li { margin:15px 0 0 20px; color:#e2c7a3 }
+.feature .feature-list.scenario:hover .feature-list-title { color: #E2C7A3; }
+.feature .feature-list.scenario:hover .feature-list-desc { color: #B39265; }
+.feature .feature-list.scenario:hover .leran-more { color: #FFB100; background-position: 90% 1px }
+
+/*talent calculator*/
+.pandaria-sub.talent-calculator #content .content-bot { padding-bottom: 600px; }
+
+/*challenge modes*/
+.pandaria-sub.challenge-modes #content .content-bot { height:1800px }
+
+/*pet battle*/
+.pandaria-sub.pet-battle #content .content-bot { height:1650px }
+.pandaria-sub.pet-battle .desc { margin-top:170px !important }
+.pandaria-sub.pet-battle .first { margin-top:260px !important }
+.pandaria-sub.pet-battle .ss-wrapper { position:relative; top:80px; display:block }
+.pandaria-sub .ss-wrapper:hover .pet-ss-01 { background-position:0 -249px }
+.pandaria-sub .ss-wrapper:hover .pet-ss-02 { background-position:0 -249px }
+
+/*zone*/
+.pandaria-sub.zone #content .content-bot { height:2250px }
+.pandaria-sub.zone .zone-desc {  }
+.pandaria-sub.zone .zone-desc-wrapper { margin:0 21px; padding:30px 50px; border-bottom:1px solid #291812; position:relative }
+.pandaria-sub.zone .zone-desc-wrapper .wandering {background-position: 0 0 }
+.pandaria-sub.zone .zone-desc-wrapper .jade-forest {background-position: 0 -141px }
+.pandaria-sub.zone .zone-desc-wrapper .four-winds {background-position: 0 -282px }
+.pandaria-sub.zone .zone-desc-wrapper .kun-lai {background-position: 0 -424px }
+.pandaria-sub.zone .zone-desc-wrapper .townlong {background-position: 0 -565px }
+.pandaria-sub.zone .zone-desc-wrapper .vale-of-eternal {background-position: 0 -565px }
+.pandaria-sub.zone .zone-desc-wrapper .disable { background:url("../../../images/game/mist-of-pandaria/media/screenshot-wrapper-zone-disabled.png") 0 0 no-repeat;}
+.pandaria-sub.zone .zone-desc-wrapper a.left { margin-left:-305px }
+.pandaria-sub.zone .zone-desc-wrapper a.right { margin-right:-310px }
+.pandaria-sub.zone .zone-desc-wrapper .image .ss { width:278px; height:141px; background-color:#fff }
+.pandaria-sub.zone .zone-desc-wrapper .detail { width:500px; margin-top:10px }
+.pandaria-sub.zone .zone-desc-wrapper .comming-soon { display:block; margin-top:77px; text-align:center; font-size:26px; color:#35353f; font-family:Palatino Linotype }
+.pandaria-sub.zone .zone-desc-wrapper.last { border:0 }
+
+/*media*/
+.pandaria-sub-media #content .content-bot { height: 1100px; }
+.pandaria-sub-media .video-section h6 { margin:50px 0 0 70px;  } 
+.pandaria-sub-media .pandaria-video { margin:10px 0 0 65px; position:relative }
+.pandaria-sub-media .left { float:left; position:relative }
+.pandaria-sub-media .right { float:right; position:relative }
+.pandaria-sub-media .art-section { margin:20px 0 0 80px; }
+.pandaria-sub-media .art-section h6 { margin-left:25px;  }
+.pandaria-sub-media .art-section .frame-wrapper { margin:10px 40px 0 0; display:block }
+.pandaria-sub-media .art-section .frame-wrapper:hover .artwork,
+.pandaria-sub-media .art-section .frame-wrapper:hover .wallpaper,
+.pandaria-sub-media .art-section .frame-wrapper:hover .screenshot{ background-position:0 -147px }
+.media-frame { border-radius: none; box-shadow: none; }
+.media-frame .tm, .media-frame .bm,
+.media-frame .tl, .media-frame .tr,
+.media-frame .bl, .media-frame .br,
+.media-frame .ml, .media-frame .mr { background:none }
+
+/*frame*/
+.frame-wrapper h6 { margin-left:75px }
+
+.frame-wrapper .frame-wood-bottom .frame-contents p {width:320px}
+.frame-wrapper .frame-wood-bottom .frame-contents .feature-item-desc { margin:0; width:245px; color:#b68542}
+.frame-wrapper .frame-wood-bottom .frame-contents .ss {  margin:15px 0 0 -9px }
+.frame-wrapper .frame-wood-bottom .frame-contents .ss.race-again:hover { background-position:0 -227px }
+.frame-wrapper .frame-wood-bottom .frame-contents .ss.glory:hover { background-position:0 -177px }
+.frame-wrapper.racial { margin-top:270px }
+.frame-wrapper.basic-info { margin-top:180px }
+.frame-wrapper.races { margin-top:50px }
+.frame-wrapper.class { margin-top:50px }
+.frame-wrapper.challenge-modes { margin-top:0 }
+.frame-wrapper.glory { margin-top:50px }
+.frame-wrapper.available-info-box .frame-contents { height:210px }
+.frame-wrapper.races .frame-contents{ height:315px }
+.frame-wrapper.basic-info .frame-contents { height:240px }
+
+.feature-list .feature-item-title { display: block; font-size: 14px; color: #caac84; text-transform: uppercase; font-weight: bold; line-height: 21px; padding-top: 10px; }
+.feature-list .feature-item-desc { font-size: 12px; margin: 0; }
+.feature-list .feature-wrapper { float:left; padding-left: 5px; }
+
+.available-info-box ul { padding-top:10px }
+.available-info-box li { float: left; width: 155px; }
+.available-info-box li a { display: block; height: 36px; padding-bottom: 17px; width: 143px; }
+.available-info-box li a:hover,.available-info-box li a:hover .horde, .available-info-box li a:hover .alliance { color:#fff }
+.available-info-box .icon-frame { float: left; }
+.available-info-box .list-title { display: block; float: left; height: 36px; line-height: 18px; padding-left: 10px; }
+.pandaren .available-info-box .list-title { line-height: 32px; }
+.available-info-box .list-title .list-faction { display: block; font-size: 11px; }
+.available-info-box .list-title .list-faction.pandaren { display:inline }
+.available-info-box .alliance { color: #247FAA; }
+.available-info-box .horde { color: #b30000; }

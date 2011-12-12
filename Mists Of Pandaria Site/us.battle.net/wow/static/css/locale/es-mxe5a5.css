@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*new feature tip*/
+.new-feature-tip .clickable strong { letter-spacing:-0.05em; font-size:18px }
+
+/* Free WoW for SC2 promo side banner */
+.promo.promo-free-wow .free-trial {  background-image: url("../../images/sidebar/free-wow-for-sc2/es-mx.jpg") }
+
+/* Services WoW Remote page */
+.content-anchors-div .anchor-box .wrapper {min-height:148px;}
+.services-pra .summary-div .price-div .price em {font:normal 40px Arial Black, Arial, Sans-serif;}
+.services-pra .summary-div .price-div .price em .refer-mark {top:5px;}
+.services-pra .summary-div .price-div .duration {top:7px;}
+
+/*arena-pass-register button*/
+.arena-pass-pvp-summary .register-now { padding: 50px 0 0; }
+
+
+/*mists of pandaria*/
+#header .back-to-community a { background-image: url("../../images/game/mist-of-pandaria/locale/es-mx/back-to-community.png") }
+.pandaria #menu,
+.pandaria-sub #menu,
+.pandaria #menu li a:hover,
+.pandaria-sub #menu li a:hover,
+.pandaria-sub-media #menu li a:hover,
+.pandaria #menu li a.menu-active,
+.pandaria-sub #menu li a.menu-active,
+.pandaria-sub-media #menu,
+.pandaria-sub-media #menu li a.menu-active { background-image:url("../../images/game/mist-of-pandaria/locale/es-mx/bg-navi.jpg") }
+.pandaria .bottom .monk { background-image: url("../../images/game/mist-of-pandaria/locale/es-mx/bg-main-feature.png") }
+.pandaria .bottom .pandaren, .pandaria .bottom .pandaren { background-image:url("../../images/game/mist-of-pandaria/locale/es-mx/bg-main-feature.png") }
+.pandaria .bottom .talent-calculator { background-image:url("../../images/game/mist-of-pandaria/locale/es-mx/bg-main-feature.png") }
+
+.ie6 #header .back-to-community a { background-image: url("../../images/game/mist-of-pandaria/locale/es-mx/back-to-community.gif") }
+
+.ie6 .pandaria .bottom .monk,
+.ie6 .pandaria .bottom .pandaren, .pandaria .bottom .pandaren,
+.ie6 .pandaria .bottom .talent-calculator { background-image:url("../../images/game/mist-of-pandaria/locale/es-mx/bg-main-feature.gif") }

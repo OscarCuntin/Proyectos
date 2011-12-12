@@ -1,0 +1,50 @@
+
+#header .back-to-community a{ background:url("../images/back-to-community.png") no-repeat; width:183px; height:40px; float:right; display:block  }
+.horizontal-top { background: url("../images/bg-horizontal-top.png") no-repeat scroll 50% 0; margin-top:60px;}
+.horizontal-bottom { background: url("../images/bg-horizontal-bottom.png") no-repeat scroll 50% 100%;}
+.pandaria .main-feature .latest-updates .feature-1, .feature .update .latest-updates .feature-1 { background:url("../images/update-1.jpg") no-repeat; }
+.pandaria .main-feature .latest-updates .feature-2, .feature .update .latest-updates .feature-2{ background:url("../images/update-2.jpg") no-repeat; }
+.pandaria .main-feature .video-thumb { height:116px; width:239px; display:block; background:url("../images/video-thumb.jpg") no-repeat; }
+.pandaria .bottom .right h4 { background:url("../images/feature-line.png") 0 bottom no-repeat; }
+.pandaria .bottom .right ul { margin:210px 0 0 20px; font-size:14px; color:#ffa800; list-style-image:url("../images/feature-bullet.png"); }
+.pandaria .bottom .monk { background:url("../images/bg-main-feature.png") 0 0 no-repeat; width:249px; height:200px; display:block; position:absolute; top:43px; left:17px }
+.pandaria .bottom .pandaren { background:url("../images/bg-main-feature.png") 0 -200px no-repeat; width:249px; height:200px; display:block; position:absolute; top:-32px; left:191px}
+.pandaria .bottom .talent-calculator { background:url("../images/bg-main-feature.png") 0 -400px no-repeat; width:249px; height:200px; display:block; position:absolute; top:154px; left:182px }
+.pandaria .media-section .frame { background:url("../images/media/gallery-viewer.png") 0 35px no-repeat; width:439px; height:440px; position:relative }
+.pandaria .media-section .frame .frame-inside { background:url('../images/media/gallery-viewer.png') -476px -36px no-repeat; width:365px; height:225px; position:absolute; }
+.pandaria .media-section .button-section #button-left { background:url("../images/media/gallery-viewer.png") -475px -285px no-repeat; width:58px; height:29px; float:left; cursor:pointer; display:block }
+.pandaria .media-section .button-section #button-right { background:url("../images/media/gallery-viewer.png") -548px -285px no-repeat; width:58px; height:29px; float:right; cursor:pointer; display:block }
+.pandaria-sub { background:url("../images/backgrounds/bg-sub-repeat.png") repeat-y 50% 0 #010a0f;}
+.pandaria-sub.pandaren .content-top { background:url("../images/bg-pandaren.jpg") 483px 107px no-repeat !important; }
+.pandaria-sub.pandaren .content-top .pararen-model { background:url("../images/bg-pandaren.png") 0 0 no-repeat; width:307px; height:507px; position:absolute; top:310px; right:100px  }
+.pandaria-sub.monk .bg-monk { background:url("../images/bg-monk.png") 0 0 no-repeat; width:761px; height:566px; position:absolute; left:360px; top:260px }
+.pandaria-sub.monk .left-bg{ background:url("../images/bg-monk-left.png") 0 0 no-repeat; width:550px; height:612px; position:absolute; left:0; top:960px }
+.pandaria-sub .basic-info .spinning-kick { background: url("../images/icon-spinning-kick.jpg") 50% 50% no-repeat; }
+.pandaria-sub .basic-info .roll { background: url("../images/icon-roll.jpg") 50% 50% no-repeat; }
+.pandaria-sub .basic-info .jade-dragon { background: url("../images/icon-jade-dragon.jpg") 50% 50% no-repeat; }
+.feature .feature-list { background: url("../images/bg-feature.png") no-repeat -25px 0; height:142px; display:block; padding:45px 0 0 155px; color:#714d2a; width:280px  }
+.feature .update { background: url("../images/bg-feature-right.png") no-repeat 0 0; width:344px; height:371px; position:absolute; top:271px; left:630px}
+.feature .content-bot ul { list-style-image:url("../images/feature-bullet.png"); margin:20px 0 0 190px; width:650px }
+.pandaria-sub.challenge-modes .left-bg{ background:url("../images/bg-challenge.png") 0 0 no-repeat; width:491px; height:584px; position:absolute; left:0; top:1070px }
+.pandaria-sub.pet-battle .bg-pet-battle { background:url("../images/bg-pet-battle.png") 0 0 no-repeat; width:670px; height:551px; position:absolute; left:395px; top:270px }
+.pandaria-sub .pet-frame { background:url("../images/media/pet-battle/screenshot-wrapper-pet.png") 0 0 no-repeat; width:436px; height:303px; position:absolute; top:-28px; left:-20px  }
+.pandaria-sub .pet-ss-01 { background:url("../images/media/pet-battle/ss-pet-01-thumb.jpg") 0 0 no-repeat; width:383px; height:249px; margin-left:9px; }
+.pandaria-sub .pet-ss-02 { background:url("../images/media/pet-battle/ss-pet-02-thumb.jpg") 0 0 no-repeat; width:383px; height:249px; margin-left:9px }
+.pandaria-sub.monk .monk-ss-01 { background:url("../images/media/monk/ss-monk-01-thumb.jpg") 0 0 no-repeat; width:383px; height:249px; margin-left:9px; }
+.pandaria-sub.pandaren .pandaren-ss-01 { background:url("../images/media/pandaren/ss-pandaren-01-thumb.jpg") 0 0 no-repeat; width:383px; height:249px; margin-left:9px; }
+.pandaria-sub.zone .zone-desc-wrapper .thumb {  background:url("../images/media/ss-zone-thumb.jpg") 0 0 no-repeat; width:279px; height:141px; display:block; margin-top:23px }
+.pandaria-sub.zone .zone-desc-wrapper .image { background:url("../images/media/screenshot-wrapper-zone.png") 0 0 no-repeat; width:336px; height:197px; display:block; margin-top:-5px  }
+.pandaria-sub.zone .zone-desc-wrapper .disable { background:url("../images/media/screenshot-wrapper-zone-disabled.png") 0 0 no-repeat;}
+.pandaria-sub-media { background:url("../images/backgrounds/bg-sub-media.jpg") 50% 0 #000000 no-repeat;  }
+.pandaria-sub-media .pandaria-video .video-wrapper { background:url("../images/media/video-wrapper.png") 0 0 no-repeat; width:887px; height:512px; position:relative; top:-15px; left:-16px; padding:20px 0 0 20px }
+.pandaria-sub-media .artwork { background:url("../images/media/artwork.jpg") 0 0 no-repeat; width:253px; height:147px }
+.pandaria-sub-media .wallpaper { background:url("../images/media/wallpaper.jpg") 0 0 no-repeat; width:253px; height:147px }
+.pandaria-sub-media .screenshot { background:url("../images/media/screenshots.jpg") 0 0 no-repeat; width:253px; height:147px }
+.pandaria-sub-media .art-section .frame { background:url("../images/media/media-wrapper.png") 0 0 no-repeat; width:311px; height:205px; position:absolute; top:8px; left:-35px }
+.frame-wrapper .frame-wood {  background:url("../images/frame-wood-repeat.png") repeat-y; width:439px; min-height:250px;}
+.frame-wrapper .frame-wood-top { background:url("../images/frame-wood-top.png") 0 0 no-repeat; width:439px; position:relative; top:-40px}
+.frame-wrapper .frame-wood-bottom { background:url("../images/frame-wood-bottom.png") 0 bottom no-repeat; width:439px;  position:relative; top:70px}
+.frame-wrapper .frame-wood-bottom .frame-contents { background:url("../images/frame-deco.jpg") right 0 no-repeat; width:342px; height:auto; margin:0 0 0 60px; padding-bottom:60px }
+.frame-wrapper .frame-wood-bottom .frame-contents .ss.race-again { background:url("../images/media/challenge-modes/ss-race-against-time-thumb.jpg") 0 0 no-repeat; width:351px; height:227px; margin-left:-8px; display:block }
+.frame-wrapper .frame-wood-bottom .frame-contents .ss.race-again:hover { background-position:0 -227px }
+.frame-wrapper .frame-wood-bottom .frame-contents .ss.glory { background:url("../images/media/challenge-modes/ss-for-glory-thumb.jpg") 0 0 no-repeat; width:351px; height:177px; display:block }

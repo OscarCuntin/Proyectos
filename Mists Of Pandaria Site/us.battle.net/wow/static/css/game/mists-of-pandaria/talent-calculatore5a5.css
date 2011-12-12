@@ -1,0 +1,110 @@
+
+#wrapper .category { margin-left: 0; }
+#choose-class { padding: 50px; text-align: center; font-size: 40px; }
+.tc-tooltip { min-width: 200px; }
+
+/* layout */
+.calculator { padding: 0 21px 0 19px; }
+.calculator-head { padding: 25px 0; }
+.calculator-head .category { padding: 0 40px 30px 40px !important; margin: 0 !important; }
+.calculator-head .class-selector { width: 875px; margin: 0 auto; padding: 35px 0; text-align: center; background: url("../../../images/game/mist-of-pandaria/talent-calculator/class-selector.jpg") 0 0 no-repeat; }
+.calculator-head .class-selector a { display: inline-block; margin-right: 10px; margin-top: 1px; }
+.calculator-head .class-selector.picked a { opacity: .25; }
+.calculator-head .class-selector a:hover,
+.calculator-head .class-selector a.tab-selected { opacity: 1; }
+.calculator-head .class-selector a:hover .icon-frame,
+.calculator-head .class-selector a.tab-selected .icon-frame { border: 1px solid #b67000; }
+.calculator-head .class-selector a.tab-selected .icon-frame .glare { display: block; height: 56px; width: 56px; -moz-box-shadow: 0 0 8px #fff inset; -webkit-box-shadow: 0 0 8px #fff inset; box-shadow: 0 0 8px #fff inset; }
+.calculator-head .class-selector a.tab-disabled,
+.calculator-head .class-selector a.tab-disabled:hover { cursor: default !important; opacity: .25; }
+.calculator-head .class-selector a.tab-disabled .icon-frame,
+.calculator-head .class-selector a.tab-disabled:hover .icon-frame { cursor: default !important; border-color: #434445; }
+
+.calculator-foot { padding: 40px; }
+.calculator-foot .notice { background: #1d1008 url("../../../images/layout/cms/alert_img.png") 10px 10px no-repeat;
+	padding: 20px 20px 20px 85px; color: #d3ac6b; font-size: 13px;
+	-moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px;
+	-moz-box-shadow: 0 0 5px #000; -webkit-box-shadow: 0 0 5px #000; box-shadow: 0 0 5px #000; }
+
+/* calculator */
+.talent-calculator { }
+.talent-calculator-header { padding: 0 40px 25px 40px; }
+.talent-calculator-header .header { font: normal 32px "Palatino Linotype", "Georgia", "Times", serif; }
+.talent-calculator .top,
+.talent-calculator .bottom { width: 100%; height: 20px; position: absolute; left: 0; }
+.talent-calculator .help-tip { margin-bottom: 15px; color: #855b47; }
+.talent-calculator .help-tip .header { margin-bottom: 5px; }
+.talent-calculator .reset { text-align: center; margin-top: 15px; }
+
+.talent-calculator-inner { padding: 40px; position: relative; background: url("../../../images/game/mist-of-pandaria/talent-calculator/calc-bg.jpg") 0 0 repeat-y; }
+.talent-calculator .top { top: -15px; background: url("../../../images/game/mist-of-pandaria/talent-calculator/calc-top.png") 0 0 no-repeat; }
+.talent-calculator .bottom { bottom: -15px; background: url("../../../images/game/mist-of-pandaria/talent-calculator/calc-bot.png") 0 0 no-repeat; }
+.talent-calculator .disclaimer { padding: 10px 10px 10px 50px; color: #F5EBD1; border: 1px solid #251d13; margin: 30px 0; background: #000 url("../../../images/layout/cms/alert_icon.png") 15px 13px no-repeat;
+	-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+
+.talent-calculator .cell { display: block; margin: 1px; border: 1px solid #000; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; }
+.talent-calculator .cell .icon-frame { vertical-align: middle; margin-right: 5px; }
+.talent-calculator .cell .name { vertical-align: middle; display: inline-block; line-height: 150%; }
+.talent-calculator .cell .name .level { display: block; }
+.talent-calculator .cell:hover { border-color: #b67000; -moz-box-shadow: 0 0 8px #b67000 inset; -webkit-box-shadow: 0 0 8px #b67000 inset; box-shadow: 0 0 8px #b67000 inset; }
+.talent-calculator .cell.cell-selected { color: #fff; background: #5b2200; border-color: #ce5209; -moz-box-shadow: 0 0 8px #ce5209 inset; -webkit-box-shadow: 0 0 8px #ce5209 inset; box-shadow: 0 0 8px #ce5209 inset; }
+.talent-calculator .cell.cell-selected:hover { background: #732b00; border-color: #f2752c; -moz-box-shadow: 0 0 8px #f2752c inset; -webkit-box-shadow: 0 0 8px #f2752c inset; box-shadow: 0 0 8px #f2752c inset; }
+.talent-calculator .cell.cell-disabled { opacity: .25; }
+.talent-calculator .cell.cell-disabled:hover { background: #141414; border-color: #b6b6b6; -moz-box-shadow: 0 0 8px #b6b6b6 inset; -webkit-box-shadow: 0 0 8px #b6b6b6 inset; box-shadow: 0 0 8px #b6b6b6 inset; }
+
+.talent-calculator .specs { float: left; width: 300px; }
+.talent-calculator .specs .spec { display: block; position: relative; background: #000; margin-bottom: 10px; border: 1px solid #251d13; -moz-box-shadow: 0 0 4px #000; -webkit-box-shadow: 0 0 4px #000; box-shadow: 0 0 4px #000; }
+.talent-calculator .specs .spec .cell { padding: 7px 10px 5px 10px; position: relative; }
+.talent-calculator .specs .spec .cell .name { color: #ff9c00; font-size: 16px; padding-left: 25px; background: url("../../../images/game/mist-of-pandaria/talent-calculator/arrows.png") 0 8px no-repeat; }
+.talent-calculator .specs .spec .cell .desc { color: #d0ae82; padding: 5px 55px 5px 0; display: block; line-height: 125%; margin: 0 !important; }
+.talent-calculator .specs .spec .cell .icon-frame { position: absolute; margin: 0; top: 5px; right: 5px; overflow: visible; }
+.talent-calculator .specs .spec .cell.cell-selected .name { color: #fff; }
+.talent-calculator .specs .spec .cell:hover .name { color: #fff; }
+.talent-calculator .specs.compact .spells { display: block; }
+.talent-calculator .specs.compact .spec .cell .desc,
+.talent-calculator .specs.compact .spec .cell .icon-frame { display: none; }
+.talent-calculator .specs .spec.spec-selected { border-color: #491d03; }
+.talent-calculator .specs .spec.spec-selected .cell { padding: 13px 10px; }
+.talent-calculator .specs .spec.spec-selected .cell .name { background-position: 0 -82px; }
+.talent-calculator .specs .spec.spec-selected .cell .icon-frame { display: block; }
+.talent-calculator .specs .role { width: 16px; height: 16px; display: block; position: absolute; bottom: 0; left: 0; background: #000 url("../../../images/icons/roles.png") no-repeat;
+	border: 1px solid #000; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.talent-calculator .specs .role.dps { }
+.talent-calculator .specs .role.healing { background-position: -16px 0; }
+.talent-calculator .specs .role.tank { background-position: -32px 0; }
+
+.talent-calculator .spells { display: none; }
+.talent-calculator .spells .scroller { max-height: 275px; overflow-y: auto; overflow-x: hidden; margin: 1px; }
+.talent-calculator .spells .filters { color: #897862; font-weight: normal; padding: 5px; border-bottom: 1px solid #491d03; }
+.talent-calculator .spells .filters a { margin: 0 3px; }
+.talent-calculator .spells .filters a.filter-active { font-weight: bold; color: #fff; }
+.talent-calculator .spells table { width: 100%; }
+.talent-calculator .spells table tr { cursor: help; }
+.talent-calculator .spells table td { padding: 3px 5px; }
+.talent-calculator .spells table td span span { color: #F5EBD1; }
+.talent-calculator .spells table .item-link { white-space: normal; }
+.talent-calculator .spells table .row1 { background: #1b150e; }
+.talent-calculator .spells table .col-level { width: 35px; text-align: center; }
+
+.talent-calculator .talents { float: right; width: 550px; }
+.talent-calculator .talents .required-level { float: right; color: #855b47; font-size: 14px; /* margin-top: 6px;*/ }
+.talent-calculator .talents .required-level span { color: #cda66f; }
+.talent-calculator .talents .tier { border: 1px solid #221d19; margin-bottom: 10px; height: 52px; background: #030200; display: block; clear: both; -moz-box-shadow: 0 0 4px #000; -webkit-box-shadow: 0 0 4px #000; box-shadow: 0 0 4px #000; }
+.talent-calculator .talents .tier li { float: left; border-left: 1px solid #221d19; }
+.talent-calculator .talents .tier li.unlocks { border: 0; width: 50px; text-align: center; color: #f6b758; font: normal 20px/52px "Palatino Linotype", "Georgia", "Times", serif; }
+.talent-calculator .talents .tier li.talent { width: 165px; overflow: hidden; }
+.talent-calculator .talents .cell { padding: 4px; }
+.talent-calculator .talents .cell .name { width: 95px; }
+
+.talent-calculator .sharing { padding-top: 10px; text-align: right; }
+.talent-calculator .sharing span { margin-left: 10px; height: 20px; display: inline-block; vertical-align: middle; }
+.talent-calculator .sharing .social a { width: 20px; height: 20px; display: inline-block; vertical-align: top; margin-left: 3px; background: url("../../../images/game/mist-of-pandaria/talent-calculator/social.png") 0 0 no-repeat; }
+.talent-calculator .sharing .social a.facebook {}
+.talent-calculator .sharing .social a.facebook:hover { background-position: 0 -20px; }
+.talent-calculator .sharing .social a.twitter { background-position: -20px 0; }
+.talent-calculator .sharing .social a.twitter:hover { background-position: -20px -20px; }
+.talent-calculator .sharing .social a.me2day { background-position: -60px 0; }
+.talent-calculator .sharing .social a.me2day:hover { background-position: -60px -20px; }
+.talent-calculator .sharing .social a.weibo { background-position: -100px 0; }
+.talent-calculator .sharing .social a.weibo:hover { background-position: -100px -20px; }
+.talent-calculator .sharing .link-build { background: url("../../../images/tool/talent-calculator/icons.gif") -200px -26px no-repeat; padding-left: 20px; }
