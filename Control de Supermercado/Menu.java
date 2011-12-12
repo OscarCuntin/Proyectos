@@ -1329,52 +1329,52 @@ public final class Menu extends Helpers{
                                    _print("Nombre     |     Precio       |       Código\n" + _GetList.Ferretera());
                                    break;
                                case 9:
-                                   _print(_GetList.Lotions());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Lotions());
                                    break;
                                case 10:
-                                   _print(_GetList.Pharmacy());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Pharmacy());
                                    break;
                                case 11:
-                                   _print(_GetList.Stationary());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Stationary());
                                    break;
                                case 12:
-                                   _print(_GetList.Garden());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Garden());
                                    break;
                                case 13:
-                                   _print(_GetList.Toys());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Toys());
                                    break;
                                case 14:
-                                   _print(_GetList.Sports());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Sports());
                                    break;
                                case 15:
-                                   _print(_GetList.Gifts());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Gifts());
                                    break;
                                case 16:
-                                   _print(_GetList.Cloth());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Cloth());
                                    break;
                                case 17:
-                                   _print(_GetList.Fruits());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Fruits());
                                    break;
                                case 18:
-                                   _print(_GetList.Fish());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Fish());
                                    break;
                                case 19:
-                                   _print(_GetList.Meat());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Meat());
                                    break;
                                case 20:
-                                   _print(_GetList.Salch());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Salch());
                                    break;
                                case 21:
-                                   _print(_GetList.Breat());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Breat());
                                    break;
                                case 22:
-                                   _print(_GetList.Masa());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Masa());
                                    break;
                                case 23:
-                                   _print(_GetList.Chesse());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Chesse());
                                    break;
                                case 24:
-                                   _print(_GetList.Milk());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Milk());
                                    break;
                                case 25:
                                    break;
