@@ -76,7 +76,7 @@ public final class Menu extends Helpers{
         // Información del Software //
         _softwareData[0] = "0.1.0";
         _softwareData[1] = "Equipo de Mario (Mario, Cesar y Tim)"; 
-        _softwareData[2] = "07/Diciembre/2011";
+        _softwareData[2] = "11/Diciembre/2011";
         //-------------------//
         day = Integer.toString(_date.get(Calendar.DATE));
         //Comprobamos que no sea una fecha del 1 al 9 ya que retorna sin "0"
