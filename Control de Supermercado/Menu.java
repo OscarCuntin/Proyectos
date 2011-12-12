@@ -74,8 +74,8 @@ public final class Menu extends Helpers{
         _phone = "(443) 312 07 20"; //Teléfono del Supermercado
         _vendorName = _getStringData("Introduzca el nombre del vendedor:"); //Variable para el nombre del vendedor en turno
         // Información del Software //
-        _softwareData[0] = "0.0.7";
-        _softwareData[1] = "Cesar Daniel Zavala Martines (y otros)"; //Lol
+        _softwareData[0] = "0.1.0";
+        _softwareData[1] = "Equipo de Mario (Mario, Cesar y Tim)"; 
         _softwareData[2] = "07/Diciembre/2011";
         //-------------------//
         day = Integer.toString(_date.get(Calendar.DATE));
