@@ -14,6 +14,7 @@ public final class Menu extends Helpers{
      * Objeto: _database
      */
     Database _database = new Database();
+    Lists _GetList = new Lists();
     /*
      * Clase: GregorianCalendar
      * Objeto: _date
@@ -44,6 +45,7 @@ public final class Menu extends Helpers{
     String itemToSearch = "";
     //Variable para la selección de la categoría
     int category = 0;
+    int categoryList = 0;
     //Variable para conocer si fue o no encontrado el objeto
     String _finded = "";
     //Variable para los objetos comprados
@@ -120,7 +122,7 @@ public final class Menu extends Helpers{
                     + "\n1) Realizar una nueva venta"
                     + "\n2) Imprimir última venta"
                     + "\n3) Mostrar recibos disponibles"
-                    + "\n4) "
+                    + "\n4) Listar productos"
                     + "\n5) Imprimir información del día"
                     + "\n8) Reiniciar el Sistema"
                     + "\n9) Información del Software"
@@ -186,7 +188,7 @@ public final class Menu extends Helpers{
                            //En caso contrario, pedirá el código (solo si es una categoría)
                            else
                                //Si es una categoría, pedimos el código
-                                if(!isNotCategory(category))
+                                if(isNotCategory(category))
                                     //Se obtiene el código del objeto introducido por el usuario
                                     itemToSearch = _getStringData("Código:");
                                //Si no lo es, demostramos que la categoría está incorrecta y por lo tanto no existirá ningún artículo
@@ -273,50 +275,885 @@ public final class Menu extends Helpers{
                                    break;
                                //Muebles
                                case 3:
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Furniture(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Furniture(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
                                    break;
+                                   
+                                      
                                case 4:
+                                   
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.White(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.White(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
                                    break;
                                case 5:
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Home(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Home(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
+                                   
+                                   
                                    break;
                                case 6:
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.DiscMovies(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.DiscMovies(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
+                                   
                                    break;
                                case 7:
+                                   
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Books(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Books(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
+                                   
                                    break;
                                case 8:
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Ferretera(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Ferretera(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
                                    break;
                                case 9:
+                                   
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Lotions(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Lotions(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
+                                   
                                    break;
                                case 10:
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Pharmacy(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Pharmacy(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
+                                   
                                    break;
                                case 11:
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Stationary(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Stationary(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
+                                   
+                                   
                                    break;
                                case 12:
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Garden(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Garden(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
+                                   
                                    break;
                                case 13:
+                                   
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Toys(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Toys(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
                                    break;
                                case 14:
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Sports(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Sports(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
                                    break;
                                case 15:
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Gifts(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Gifts(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
+                                   
+                                   
                                    break;
                                case 16:
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Cloth(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Cloth(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
                                    break;
                                case 17:
+                                   
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Fruits(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Fruits(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
                                    break;
                                case 18:
+                                   
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Fish(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Fish(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
+                                   
                                    break;
                                case 19:
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Meat(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Meat(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
                                    break;
                                case 20:
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Salch(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Salch(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
+                                   
                                    break;
                                case 21:
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Breat(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Breat(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
                                    break;
                                case 22:
+                                   
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Masa(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Masa(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
                                    break;
                                case 23:
+                                   
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Chesse(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Chesse(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
                                    break;
                                case 24:
+                                   
+                                   
+                                   //Se busca el código en las bases de datos
+                                   _finded = _database.Milk(itemToSearch);
+                                   //Se convierte a mayúsculas por cualquier caso necesario
+                                   _finded.toUpperCase();
+                                   //Si no fue encontrado,el retorno de el método es "" (vacío)
+                                   //Adicional, el código deberá ser diferente de "s1" ya que "s1" es el comando
+                                   //para salir de la venta.
+                                   if(_finded.equalsIgnoreCase("") && !itemToSearch.equalsIgnoreCase("s1"))
+                                       _print("Objeto no encontrado");
+                                   else
+                                   {
+                                       //Si el código introducido fue "s1" se rompe el búcle
+                                       if(itemToSearch.equalsIgnoreCase("s1"))
+                                           break;
+                                       else
+                                       {
+                                           int quantity = 0;
+                                            itemToSearch.toUpperCase();
+                                            _items = _database.Milk(itemToSearch);
+                                            buyedItems = _getItemName(_items);
+                                            quantity = _getIntFromStringData("Cantidad: ");
+                                            if(quantity == 400)
+                                                quantity = _getIntFromStringData("La cantidad solo pueden ser valores enteros, introduzca una nueva cantidad:");
+                                             _print("Se compró: " + buyedItems
+                                                     + "\nCantidad: " + quantity
+                                                     + "\nPrecio: $" + (_getPriceValue(_items) * quantity));
+                                             sellsInfo[_count][0] = quantity + "";
+                                             sellsInfo[_count][1] = buyedItems;
+                                             sellsInfo[_count][2] = "0%";
+                                             sellsInfo[_count][3] = (_getPriceValue(_items) * quantity) + "";
+                                            _count++;
+                                            totalItems += quantity;
+                                            cashWinned += (_getPriceValue(_items) * quantity);
+                                       }
+                                   }
+                                   
                                    break;
-                               case 26:
+                               case 26:  
                                    _print("Categoría no encontrada");
                                    break;
                            }
@@ -425,6 +1262,127 @@ public final class Menu extends Helpers{
                                 }
                         break;
                     case 4:
+                        categoryList = _getIntFromStringData("Categoría:"
+                                   + "\n1) Electrónicos"
+                                   + "\n2) Línea blanca"
+                                   + "\n3) Muebles"
+                                   + "\n4) Blancos"
+                                   + "\n5) Hogar"
+                                   + "\n6) Discos y Películas"
+                                   + "\n7) Revistas y Libros"
+                                   + "\n8) Ferretería"
+                                   + "\n9) Perfumería"
+                                   + "\n10) Farmacia"
+                                   + "\n11) Papelería"
+                                   + "\n12) Jardinería"
+                                   + "\n13) Juguetería"
+                                   + "\n14) Deportes"
+                                   + "\n15) Regalos"
+                                   + "\n16) Ropa"
+                                   + "\n17) Frutas y Verduras"
+                                   + "\n18) Pescados y Mariscos"
+                                   + "\n19) Carnes"
+                                   + "\n20) Salchichonería"
+                                   + "\n21) Panadería"
+                                   + "\n22) Tortillería"
+                                   + "\n23) Cremas y Quesos"
+                                   + "\n24) Lácteos"
+                                   + "\n25) Salir");
+                           //Si la selección de la categoría fue mala, se dará un aviso
+                           if(categoryList >= 26)
+                               categoryList = 26;
+                           //Si la selección de la categoría fue "25" se saldrá
+                           if(categoryList == 25)
+                               break;
+                           //En caso contrario, pedirá el código (solo si es una categoría)
+                           else
+                               //Si es una categoría, pedimos el código
+                                if(isNotCategory(categoryList)==false)
+                                    //Se obtiene el código del objeto introducido por el usuario
+                                    itemToSearch = _getStringData("Código:");
+                               //Si no lo es, demostramos que la categoría está incorrecta y por lo tanto no existirá ningún artículo
+                                else
+                                    category = 26;
+                           switch(categoryList){
+                               case 1:
+                                   _print(_GetList.electronics());
+                                   break;
+                               case 2:
+                                   _print(_GetList.whiteLine());
+                                   break;
+                               case 3:
+                                   _print(_GetList.Furniture());
+                                   break;
+                               case 4:
+                                   _print(_GetList.White());
+                                   break;
+                               case 5:
+                                   _print(_GetList.Home());
+                                   break;
+                               case 6:
+                                   _print(_GetList.DiscMovies());
+                                   break;
+                               case 7:
+                                   _print(_GetList.Books());
+                                   break;
+                               case 8:
+                                   _print(_GetList.Ferretera());
+                                   break;
+                               case 9:
+                                   _print(_GetList.Lotions());
+                                   break;
+                               case 10:
+                                   _print(_GetList.Pharmacy());
+                                   break;
+                               case 11:
+                                   _print(_GetList.Stationary());
+                                   break;
+                               case 12:
+                                   _print(_GetList.Garden());
+                                   break;
+                               case 13:
+                                   _print(_GetList.Toys());
+                                   break;
+                               case 14:
+                                   _print(_GetList.Sports());
+                                   break;
+                               case 15:
+                                   _print(_GetList.Gifts());
+                                   break;
+                               case 16:
+                                   _print(_GetList.Cloth());
+                                   break;
+                               case 17:
+                                   _print(_GetList.Fruits());
+                                   break;
+                               case 18:
+                                   _print(_GetList.Fish());
+                                   break;
+                               case 19:
+                                   _print(_GetList.Meat());
+                                   break;
+                               case 20:
+                                   _print(_GetList.Salch());
+                                   break;
+                               case 21:
+                                   _print(_GetList.Breat());
+                                   break;
+                               case 22:
+                                   _print(_GetList.Masa());
+                                   break;
+                               case 23:
+                                   _print(_GetList.Chesse());
+                                   break;
+                               case 24:
+                                   _print(_GetList.Milk());
+                                   break;
+                               case 25:
+                                   break;
+                               case 26:
+                                   _print ("Categoria no Encontrada");
+                                   break;
+                           }
+                        
                         break;
                     case 5:
                         //Se imprime la información del día
@@ -434,8 +1392,39 @@ public final class Menu extends Helpers{
                                 + "\r\nCantidad total de compradores: " + _folio
                                 + "\r\nGanancias totales: " + cashWinned
                                 + "\r\nVentas totales: " + totalItems);
-                        _createTxtFile("InD",_fullDate);
-                        writeOnTxtFile(_dayInfo, "InD", _fullDate);
+                        String _itemsSelled = "";
+                        if(_count == 0)
+                            _itemsSelled = "Último registro: " + fullDate + " a las: " + fullHour
+                                    + "\r\nNo hay ventas aún"
+                                    + "\r\n=================================";
+                        else
+                        {
+                            for(int i = 0; i < sellsInfo.length; i++)
+                            {
+                                for(int j = 0; j < sellsInfo[i].length; j++)
+                                {
+                                    if(sellsInfo[i][j].equalsIgnoreCase(""))
+                                        break;
+
+                                    if(j == 3)
+                                    {
+                                        _itemsSelled += sellsInfo[i][j];
+                                        _itemsSelled += "\n";
+                                    }
+                                    else
+                                    {
+                                        _itemsSelled += sellsInfo[i][j];
+                                        _itemsSelled += " | ";
+                                    }
+                                }
+                            }
+                        }
+                        _print("Se creará un recibo para las ventas del día");
+                        _createTxtFile("InD" + _folio,_fullDate);
+                        _print("Se creará un recibo adicional de los objetos vendidos durante el día");
+                        _createTxtFile("ObV" + _folio, _fullDate);
+                        writeOnTxtFile(_dayInfo, "InD" + _folio, _fullDate);
+                        writeOnTxtFile(_itemsSelled, "ObV" + _folio, _fullDate);
                         _print(_dayInfo);
                         break;
                     case 6:
