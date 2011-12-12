@@ -14,5 +14,26 @@ namespace UpA;
 
 class Convert{
 	
+	public function countryName($Code)
+	{
+		return $Code;
+	}
+	
+	public function countryToContinent($Country)
+	{
+		return $Country;
+	}
+	
+	public function httpStatus($Code)
+	{
+		$Code = absint($Code);
+		return $Code;
+	}
+	
+	public function fileExtType($Extension)
+	{
+		return $Type;
+	}
 }
+
 ?>
