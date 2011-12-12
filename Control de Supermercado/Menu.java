@@ -76,7 +76,7 @@ public final class Menu extends Helpers{
         // Información del Software //
         _softwareData[0] = "0.1.0";
         _softwareData[1] = "Equipo de Mario (Mario, Cesar y Tim)"; 
-        _softwareData[2] = "11/Diciembre/2011";
+        _softwareData[2] = "07/Diciembre/2011";
         //-------------------//
         day = Integer.toString(_date.get(Calendar.DATE));
         //Comprobamos que no sea una fecha del 1 al 9 ya que retorna sin "0"
@@ -1305,28 +1305,28 @@ public final class Menu extends Helpers{
                                     category = 26;
                            switch(categoryList){
                                case 1:
-                                   _print(_GetList.electronics());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.electronics());
                                    break;
                                case 2:
-                                   _print(_GetList.whiteLine());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.whiteLine());
                                    break;
                                case 3:
-                                   _print(_GetList.Furniture());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Furniture());
                                    break;
                                case 4:
-                                   _print(_GetList.White());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.White());
                                    break;
                                case 5:
-                                   _print(_GetList.Home());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Home());
                                    break;
                                case 6:
-                                   _print(_GetList.DiscMovies());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.DiscMovies());
                                    break;
                                case 7:
-                                   _print(_GetList.Books());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Books());
                                    break;
                                case 8:
-                                   _print(_GetList.Ferretera());
+                                   _print("Nombre     |     Precio       |       Código\n" + _GetList.Ferretera());
                                    break;
                                case 9:
                                    _print(_GetList.Lotions());

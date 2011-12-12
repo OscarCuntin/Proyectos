@@ -1,6 +1,6 @@
 package elcarritomagico;
 
-public class Lists extends Helpers{
+public class Lists{
     
     public String electronics()
     {
@@ -12,7 +12,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_electronics[i][j]+"     ";
+                cad+=_electronics[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -27,7 +27,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_whiteLine[i][j]+"     ";
+                cad+=_whiteLine[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -43,7 +43,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Furniture[i][j]+"     ";
+                cad+=_Furniture[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -59,7 +59,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_White[i][j]+"     ";
+                cad+=_White[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -75,7 +75,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Home[i][j]+"     ";
+                cad+=_Home[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -90,7 +90,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_DiscMovies[i][j]+"     ";
+                cad+=_DiscMovies[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -106,7 +106,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Books[i][j]+"     ";
+                cad+=_Books[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -122,7 +122,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Ferretera[i][j]+"     ";
+                cad+=_Ferretera[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -138,7 +138,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Lotions[i][j]+"     ";
+                cad+=_Lotions[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -154,7 +154,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Pharmacy[i][j]+"     ";
+                cad+=_Pharmacy[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -170,7 +170,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Stationary[i][j]+"     ";
+                cad+=_Stationary[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -186,7 +186,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Garden[i][j]+"     ";
+                cad+=_Garden[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -203,7 +203,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Toys[i][j]+"     ";
+                cad+=_Toys[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -219,7 +219,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Sports[i][j]+"     ";
+                cad+=_Sports[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -235,7 +235,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Gifts[i][j]+"     ";
+                cad+=_Gifts[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -251,7 +251,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Cloth[i][j]+"     ";
+                cad+=_Cloth[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -267,7 +267,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Fruits[i][j]+"     ";
+                cad+=_Fruits[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -283,7 +283,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Fish[i][j]+"     ";
+                cad+=_Fish[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -299,7 +299,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Meat[i][j]+"     ";
+                cad+=_Meat[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -315,7 +315,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Salch[i][j]+"     ";
+                cad+=_Salch[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -331,7 +331,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Breat[i][j]+"     ";
+                cad+=_Breat[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -347,7 +347,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Masa[i][j]+"     ";
+                cad+=_Masa[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -364,7 +364,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Chesse[i][j]+"     ";
+                cad+=_Chesse[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
@@ -380,7 +380,7 @@ public class Lists extends Helpers{
         String cad="";
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++)
-                cad+=_Milk[i][j]+"     ";
+                cad+=_Milk[i][j]+"  |  ";
             cad+="\n";
         }
         return cad;
