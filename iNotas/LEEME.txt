@@ -1,0 +1,41 @@
+======================================================
+		***		PROYECTO iNOTAS		***
+======================================================
+		***		INFORMACIÓN			***		
+------------------------------------------------------
+|-¿Qué es iNotas?
+|---iNotas es un sistema en el cual se pueden guardar
+|---textos o códigos y que posteriormente tengan un
+|---estilo basado en el tipo de lenguaje escogido
+|-¿Qué puedo hacer con el código fuente?
+|---Puedes utilizarlo y mejorarlo de forma gratuita,
+|---únicamente está prohibida la venta de dicho
+|---código o la eliminación de los Copyrights.		
+|-¿Cómo instalar?
+|---Crear una base de datos para la tabla "pastes"
+|---Ejecutar en dicha base de datos el archivo:
+|---pastes_db.sql
+|---Configurar el sistema en: N/System.php
+|---Todos los archivos deben ir en la raíz de la web
+|---Es decir: http://tupagina/
+|-Acerca de la beta
+|---Por ahora es una beta de los sistemas, por lo que
+|---puede que no funcione correctamente, cualquier
+|---error será reportado en el GitHub correspondiente
+|---a los proyectos de Asfo: http://github.com/asfo/
+======================================================
+		****	AGRADECIMIENTOS		***
+------------------------------------------------------
+|-Los desarrolladores de Prettify
+|-Los desarrolladores de DropKick
+|-Los desarrolladores de showMessage
+|-Los desarrolladores de Elastic Source
+|-A los usuarios de iNotas
+======================================================
+		***		URLs				****
+------------------------------------------------------
+|-GitHub: http://github.com/Asfo/
+|-Google Code: http://code.google.com/p/asfoprojects
+|-FrozenGaming: http://frozengaming.com.mx
+|-iAsfo: http://iasfo.co
+======================================================

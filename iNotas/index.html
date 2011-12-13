@@ -9,7 +9,7 @@
 		(_) \ | | ___ | |_ __ _ ___ 
 		| |  \| |/ _ \| __/ _` / __|
 		| | |\  | (_) | || (_| \__ \
-		|_|_| \_|\___/ \__\__,_|___/ v1
+		|_|_| \_|\___/ \__\__,_|___/ v1beta
 		Desarrollado por Asfo (C) 2011.
 	-->
 	<style type="text/css">
@@ -31,13 +31,46 @@
 				var titulo = $("#titulo").val();
 				var paste = $("#paste").val();
 				var lenguaje = $("#lenguaje").val();
-				jQuery('body').showMessage({
-					'thisMessage'      :	    ['Se creó tu iNota, en un momento ser&aacute;s redirigido a ella...'],
-					'className'        :		'success',
-					'opacity'  		   :		95,
-					'displayNavigation':	    false,
-					'autoClose'		   :		true,
-					'delayTime'		   :		3000
+				var pasteFinal = escape(paste);
+				pasteFinal = pasteFinal.replace(/%0A/g, "\n");
+				dataString = 'titulo=' + titulo + '&paste=' + pasteFinal + '&lenguaje=' + lenguaje;
+				$.ajax({
+					type			: "POST",
+					url				: "N/doPaste.php",
+					data			: dataString,
+					beforeSend		: function(){
+						jQuery('body').showMessage({
+							'thisMessage'      :	    ['Se está creando tu iNota...'],
+							'className'        :		'success',
+							'opacity'  		   :		95,
+							'displayNavigation':	    false,
+							'autoClose'		   :		true,
+							'delayTime'		   :		3000
+						});
+					},
+					success			: function(response){
+						jQuery('body').showMessage({
+							'thisMessage'      :	    ['Se creó tu iNota correctamente. Ahora ser&aacute;s redirigido a ella'],
+							'className'        :		'success',
+							'opacity'  		   :		95,
+							'displayNavigation':	    false,
+							'autoClose'		   :		true,
+							'delayTime'		   :		3000
+						});
+						setTimeout(function(){
+							window.location.href = 'N/?file='+response;
+						}, 3000);
+					},
+					error			: function(){
+						jQuery('body').showMessage({
+							'thisMessage'      :	    ['Hubo un error al procesar tu iNota...'],
+							'className'        :		'success',
+							'opacity'  		   :		95,
+							'displayNavigation':	    false,
+							'autoClose'		   :		true,
+							'delayTime'		   :		3000
+						});
+					},
 				});
 				return false;
 			});
@@ -63,7 +96,7 @@
 			</div>
 			<div style="float:right;">
 				<div id="menu">
-					<a href="#nuevoPaste">Crear nueva iNota</a> | <a href="#ayuda">Ayuda</a>
+					<a href="#">Crear nueva iNota</a> | <a href="#ayuda">Ayuda</a>
 				</div>
 			</div>
 		</div>
@@ -73,7 +106,7 @@
 			<div id="nuevoPaste">
 				<div style="float:left;">
 					<span>Crea una nueva iNota</span>
-					<span>La iNota <b>no</b> se guardar&aacute;</span>
+					<span>La iNota <b>si</b> se guardar&aacute;</span>
 				</div>
 				<div style="float:right;">
 					<a href="#iniciarSesion" id="iniciarSesion">Iniciar Sesi&oacute;n</a> | 
@@ -88,7 +121,7 @@
 					<div style="float:left;">
 						<span style="font-size:12px; color: #AAA; font-weight: bold; text-shadow: #DDD 0px 1px 0px;">Lenguaje:</span><br />
 						<select name="lenguaje" id="lenguaje" tabindex="1" class="pretty dk">
-							<option value="sin-codigo">Sin Lenguaje</option>
+							<option value="leng-simple">Sin Lenguaje</option>
 							<option value="html">HTML</option>
 							<option value="css">CSS</option>
 							<option value="javascript">Javascript</option>

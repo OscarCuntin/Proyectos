@@ -170,6 +170,22 @@
 		#paste:focus{
 			outline: 0;
 		}
+		#contenidoPaste{
+			line-height: 1.4em;
+			width: 886px; 
+			min-height: 200px; 
+			padding-top: 18px;
+			padding-left: 60px;
+			border-top: none;
+			border-left: solid rgb(202, 207, 213) 1px; 
+			border-right: solid rgb(202, 207, 213) 1px; 
+			border-bottom: none; 
+			margin-top:-5px; 
+			background:url('../images/bg_paste_area.jpg');
+		}
+		#contenidoPaste:focus{
+			outline: 0;
+		}
 		.botonEnviarNota {
 			font:14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 			font-weight:bold;
