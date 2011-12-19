@@ -19,4 +19,14 @@
 		exit('El archivo: <b>upa.convert.php</b> no existe o no fue encontrado');
 	else
 		require_once('upa.convert.php');
+	
+	/*
+	* Se incluye el archivo: 'upa.detect.php'
+	* Si no existe, se da un aviso
+	* Si existe, se incluye
+	*/
+	if(!file_exists('upa.detect.php'))
+		exit('El archivo: <b>upa.detect.php</b> no existe o no fue encontrado');
+	else
+		require_once('upa.detect.php');
 ?>
