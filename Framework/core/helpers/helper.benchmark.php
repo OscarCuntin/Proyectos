@@ -11,5 +11,8 @@
  *
  **********************************************************/
  
- 
+ function benchMarkStart(){
+	global $start;
+	$start = microtime(true);
+ }
  ?>
