@@ -4,6 +4,7 @@
 *** PROYECTOS ACTIVOS ***
 |- UPA
 |- iNotas
+|- Framework
 ========================================================================
 *** PROYECTOS INACTIVOS ***
 |- Control de Supermercado 
@@ -28,8 +29,12 @@
 |--- Este proyecto es una simple librería de utilidades para facilitar
 |--- ciertas acciones que son muy comúnes en muchas páginas
 |- iNotas
-|--- Este proyecto es el diseño de un "Pastebin" únicamente en la 
-|--- parte del diseño y nada más. Si tengo tiempo lo haré funcionar.
+|--- Este proyecto es un "Almacenador de Notas" que incluye el
+|--- "coloreado" se sintaxis en caso de que sea un lenguaje de 
+|--- programación el pegado.
+|- Framework
+|--- Este proyecto es la creación de una área de trabajo para agilizar
+|--- el desarrollo de aplicaciones y páginas web.
 ========================================================================
 *** LICENCIA ****
 |- Todos los proyectos son liberados bajo la licencia GPL v2
