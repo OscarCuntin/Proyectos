@@ -12,7 +12,12 @@
  **********************************************************/
  
  function benchMarkStart(){
-	global $start;
-	$start = microtime(true);
+	global $totalTime;
+	$totalTime = microtime(true);
+ }
+ 
+ function benchMarkEnd(){
+	global $totalTime;
+	$totalTime = microtime(true) - $totalTime;
  }
  ?>

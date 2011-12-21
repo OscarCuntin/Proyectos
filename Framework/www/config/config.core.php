@@ -24,6 +24,6 @@ DEFINE('APPLICATION_PATH', 'application');
 //Configuración (por medio de una definición) para la carpeta de librerías del núcleo [Obligatoria]
 DEFINE('LIBRARY_PATH', 'lib');
 
-//Configuración (por medio de una definición) para el tipo de traducción
-DEFINE('TRANSLATION', 'normal');
+//Configuración (por medio de una definición) para el idioma
+DEFINE('LANGUAGE', 'spanish');
 ?>
