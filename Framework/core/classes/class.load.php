@@ -104,7 +104,7 @@
 	
 	public function Library($Name, $Library = NULL, $Application = NULL)
 	{
-		$Lib = str_replace("library.", "", $Name);
+		$Lib = str_replace("lib.", "", $Name);
 		
 		if(isset($Name) && $Library != NULL)
 		{

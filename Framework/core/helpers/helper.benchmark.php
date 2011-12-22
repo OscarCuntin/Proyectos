@@ -10,14 +10,37 @@
  *		----------------------------------------------------
  *
  **********************************************************/
+	/*
+	* Analiza el momento en que arrancará el sistema.
+	*/
+	function benchMarkStart(){
+		global $totalTime;
+		$totalTime = microtime(true);
+	}
+	/*
+	* Basado en el momento en que arrancó el sistema, comprueba en que momento
+	* finalizó la carga del sistema.
+	*/
+	 function benchMarkEnd(){
+		global $totalTime;
+		$totalTime = microtime(true) - $totalTime;
+	 }
  
- function benchMarkStart(){
-	global $totalTime;
-	$totalTime = microtime(true);
- }
+	/*
+	* Analiza la cantidad de memoria utilizada.
+	* @Retorna: String
+	*/
+	function memoryUsage(){
+		$Usage = "";
+		$memUsage = memory_get_usage(true);
+		if($memUsage < 1024)
+			$Usage = $memUsage . " Bytes";
+		elseif($memUsage < 1048576)
+			$Usage = $memUsage . " Kilobytes";
+		else
+			$Usage = $memUsage. . " Megabytes";
+		return $Usage;
+	}
  
- function benchMarkEnd(){
-	global $totalTime;
-	$totalTime = microtime(true) - $totalTime;
- }
+ //EOF
  ?>
