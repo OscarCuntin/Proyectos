@@ -12,9 +12,14 @@
  **********************************************************/
 	if(!DEFINED('_ACCESS'))
 		die("<h1>Error</h1><p>No puedes acceder a este archivo directamente</p>");
+	 function Route()
+	 {
+	 
+	 }
+	 
 	 function Segment($Segment = 0, $r = FALSE)
 	 {
-		if($r === FALSE)
+		if($r === FALSE)//FALSE === FALSE | false != FALSE
 		{
 			$route = Route();
 			
@@ -59,9 +64,61 @@
 		//To Do: Ver si es mejor hacerlas globales...
 		$controlApp = FALSE; /* --- */ $Match = FALSE;
 		
+		//Ruta visual: "www/config/config.routes.php"
 		if(FILE_EXISTS(WWW_PATH . DS . 'config' . DS . 'config.routes.php'))
 		{
+			include WWW_PATH . DS . 'config' . DS . 'config.routes.php';
+			
+				if(is_array($Routes))
+				{
+					if(isLang())//isLang() == true
+						$App = segment(1);
+					else
+						$App = segment(0);
+					//Separamos todas las rutas de 1 x 1
+					foreach($Routes as $Route)
+					{
+						$Pattern = $Route['pattern'];
+						$Match = preg_match($Pattern, $App); //El valor de la variable $Match deberá ser true ó false si son compatibles los valores
+						
+						if($Match) //$Match == true
+						{
+							$Application 			= $Route['application'];
+							$controlApp				= $Route['controller'];
+							$Method					= $Route['method'];
+							$Params					= $Route['params'];
+							//Se rompe el búcle sin perder información
+							break;
+						}
+						
+					}
+				}//Es obligatorio que sea un array la ruta...Por ahora si no lo es, solamente retornará falso
+				//To Do: Buscar una mejor forma de hacer que el usuario la tenga como "array" siempre.
+				else
+					return false;
+		}
 		
+		if(!$Match) //$Match == false | Esto se comprueba ajeno a la sección superior ya que si no entró en el if superior, $Match permanece con el valor: FALSE.
+		{
+			if(!segment(0))
+				$App = DEFAULT_APPLICATION;
+			elseif(segment(0) && !segment(1))
+				if(isLang()) //isLang() == true
+					$App = DEFAULT_APPLICATION;
+				else
+					$App = segment(0);
+			else
+			{
+				if(isLang()) //isLang() == true
+					$App = segment(1);
+				
+				if(segment(2))
+				{
+				
+				}
+			}
 		}
 	 }
+	
+//EOF
 ?>
