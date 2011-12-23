@@ -10,4 +10,7 @@
  *		----------------------------------------------------
  *
  **********************************************************/
+ 
+ //Configuración (por medio de una definición) de la aplicación en uso
+ DEFINE('DEFAULT_APPLICATION', 'default');
 ?>
