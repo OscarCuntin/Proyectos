@@ -41,7 +41,7 @@
 		elseif($memUsage < 1048576)
 			$Usage = $memUsage . " Kilobytes";
 		else
-			$Usage = $memUsage. . " Megabytes";
+			$Usage = $memUsage . " Megabytes";
 		return $Usage;
 	}
  

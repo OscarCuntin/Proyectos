@@ -48,7 +48,7 @@ include CORE_PATH . DS . 'classes' . DS . 'class.model.php';
 
 $Load = new AsfoLoad();
 
-$Helpers = array('il8n', 'router', 'benchmark', 'exceptions', 'string', 'sessions', 'security');
+$Helpers = array('i18n', 'router', 'benchmark', 'exceptions', 'string', 'sessions', 'security');
 
 $Load -> Helper($Helpers);
 
