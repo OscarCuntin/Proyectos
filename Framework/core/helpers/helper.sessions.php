@@ -10,5 +10,21 @@
  *		----------------------------------------------------
  *
  **********************************************************/
- 
+	 if(!DEFINED('_ACCESS'))
+		die("<h1>Error</h1><p>No tienes permiso para acceder aqu&iacute;</p>");
+	
+	function _SESSION($SessionName, $Check = FALSE)
+	{
+		if(!$Check)
+		{
+			if(isset($_SESSION[$SessionName]))
+				return filter($_SESSION[$SessionName]);
+			else
+				return false;
+		}
+		else
+			$_SESSION[$SessionName] = $Check;
+		
+		return true;
+	}
  ?>
