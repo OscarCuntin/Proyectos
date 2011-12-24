@@ -19,7 +19,7 @@
 	public static function Instance($Class)
 	{
 		if(is_null($Class))
-			die(Error("Error", "El m&eacute;todo <b>Instance()</b> no est&aacute; recibiendo un valor"));
+			die(Error('Error', 'El m&eacute;todo <b>Instance($e)</b> est&aacute; recibiendo un valor nulo'));
 		
 		if(!array_key_exists($Class, self::$Instances))
 			self::$Instances[$Class] = new $Class;

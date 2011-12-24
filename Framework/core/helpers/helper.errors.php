@@ -13,17 +13,39 @@
  
  function Error($Title = "", $Message = "")
  {
-	//Si, se ve tonto, pero por ahora tengo flojera xD
-	if($Title == "" || $Message == "")
-		echo "";
-	else
-	{
-		echo "<h1>".$Title."</h1>";
-		echo "<p>".$Message."</p>";
-		/*
-			<h1>Hola</h1>
-			<p>Mundo</p>
-		*/
-	}
+?>
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+			<title><?php print $Title; ?></title>
+			<link rel="stylesheet" href="<?php print CORE_PATH . DS . 'pages' . DS . 'error.css'; ?>" type="text/css" />
+		</head>
+
+		<body>
+			<div id="container-error">
+				<h1><?php print $Title; ?></h1>
+				<p><?php print $Message; ?></p>
+			</div>
+			<footer>
+				Copyright &copy; 2011 Asfo Framework
+			</footer>
+		</body>
+	</html>
+<?php
  }
+	function Exception($e)
+	{
+		if(is_object($e))
+		{
+			echo "C&oacute;digo de Error: " . $e -> getCode() . "<br />";
+			echo "Mensaje de Error: " . $e -> getMessage() . "<br />";
+			echo "Archivo de Error: " . $e -> getFile() . "<br />";
+			echo "L&iacute;nea de Error: " . $e -> getLine() . "<br />";
+			exit;
+		}
+		else
+			die("<h1>Error</h1><p>La funci&oacute;n <b>Exception()</b>debe recibir un argumento de tipo objeto</p>");
+	}
+ 
  ?>
