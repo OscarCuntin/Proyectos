@@ -1,0 +1,19 @@
+/* ------------ Archivo 'Para Hacer' ------------- */
+/***************************************************
+| Todo lo listado aquí es solamente una referencia
+| de lo que el Framework necesita o cambios que
+| deje para hacer después.
+****************************************************
+| -Crear un archivo "defines.php" que contenga 
+| todas las definiciones que no deberían ser
+| modificadas por el usuario.
+| -Agregar documentación interna
+| -Agregar seguridad a todos los archivos.
+| -Mandar al demonio todos los die(...); y agregar
+| la nueva función Error($Title, $Message); 
+| -Crear un archivo para que el usuario pueda 
+| modificarlo y crear su propio código para "Debug"
+| o pueda utilizarlo como "predefinido"
+****************************************************
+| Copyright (C) 2011 Asfo Framework
+****************************************************/
