@@ -13,7 +13,9 @@
  if(!DEFINED('_ACCESS'))
 	die("<h1>Error</h1><p>No puedes acceder a este archivo directamente</p>");
 
- class AsfoLoad	{
+ include ("class.singleton.php");
+ 
+ class AsfoLoad{
 	/*
 	*
 	*/
@@ -131,6 +133,40 @@
 			else
 				die("<h1>Error</h1>La librer&iacute;a <b>$Name</b> no existe</p>");
 		}
+	}
+	
+	public function Controller($Controller, $App = NULL)
+	{
+		$Parts = explode("_", $Controller);
+		
+		if(!$this -> Application) //true
+		{
+			if(FILE_EXISTS(WWW_PATH . DS . APPLICATION_PATH . DS . $App . DS . CONTROLLERS . DS . CONTROLLER . '.' . strtolower($Parts[0]) . '.php'))
+				$File = WWW_PATH . DS . APPLICATION_PATH . DS . $App . DS . CONTROLLERS . DS . CONTROLLER . '.' . strtolower($Parts[0]) . '.php';
+			elseif(count($Parts) == 2)
+				$File = WWW_PATH . DS . APPLICATION_PATH . DS . strtolower($Parts[0]) . DS . CONTROLLERS . DS . CONTROLLER . '.' . strtolower($Parts[0]) . '.php';
+			echo $File;
+		}
+		else
+		{
+			if(FILE_EXISTS(WWW_PATH . DS . APPLICATION_PATH . DS . $App . DS . CONTROLLERS . DS . CONTROLLER . '.' . strtolower($Parts[0]) . '.php'))
+				$File = WWW_PATH . DS . APPLICATION_PATH . DS . $App . DS . CONTROLLERS . DS . CONTROLLER . '.' . strtolower($Parts[0]) . '.php';
+			elseif(FILE_EXISTS(WWW_PATH . DS . APPLICATION_PATH . DS . $this -> Application . DS . CONTROLLERS . DS . CONTROLLER . '.' . strtolower($Parts[0]) . '.php'))
+				$File = WWW_PATH . DS . APPLICATION_PATH . DS . $this -> Application . DS . CONTROLLERS . DS . CONTROLLER . '.' . strtolower($Parts[0]) . '.php';
+			else
+				$File = WWW_PATH . DS . APPLICATION_PATH . DS . strtolower($Parts[0]) . DS . CONTROLLERS . DS . CONTROLLER . '.' . strtolower($Parts[0]) . '.php';
+		}
+
+		if(FILE_EXISTS($File))
+		{
+			if(CLASS_EXISTS($Controller))
+				return AsfoSingleton::instance($Controller);
+			
+			include $File;
+			
+			return AsfoSingleton::instance($Controller);
+		}
+		return false;
 	}
 	
  }
