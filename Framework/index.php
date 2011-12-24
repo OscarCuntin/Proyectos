@@ -10,7 +10,10 @@
  *		----------------------------------------------------
  *
  **********************************************************/
-
+ 
+ //Definición de la versión del Framework
+ DEFINE('CORE_VERSION', '0.0.1');
+ 
  //Definición de seguridad
  DEFINE('_ACCESS', TRUE);
  
@@ -24,6 +27,10 @@
  //Definición de la ruta a la aplicación
  DEFINE('APP_PATH', ROOT . DS . 'www');
 
- //Se incluye el arranque del framework
- include(APP_PATH . DS . 'load.php');
+	if(FILE_EXISTS(APP_PATH . DS . 'load.php'))
+		//Se incluye el arranque del framework
+		include(APP_PATH . DS . 'load.php');
+	else
+		die("<h1>Error</h1><p>El archivo de carga (<b>load.php</b>) no existe o no est&aacute; en la ruta especificada</p>");
+
 ?>
