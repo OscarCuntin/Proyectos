@@ -11,7 +11,7 @@
  *
  **********************************************************/
  if(!DEFINED('_ACCESS'))
-	die("<h1>Error</h1><p>No puedes acceder a este archivo directamente</p>");
+	die(Error("Error", "No puedes acceder a este archivo directamente"));
 
  include ("class.singleton.php");
  

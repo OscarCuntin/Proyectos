@@ -12,18 +12,22 @@
  **********************************************************/
  class AsfoSingleton
  {
-	private static $Instances = array(); //Private (?)
+	private static $Instances = array();
+	
+	public function __construct() { }
 	
 	public static function Instance($Class)
 	{
 		if(is_null($Class))
-			die("<h1>Error</h1><p>El m&eacute;todo <b>Instance()</b> no est&aacute; recibiendo un valor</p>");
+			die(Error("Error", "El m&eacute;todo <b>Instance()</b> no est&aacute; recibiendo un valor"));
 		
 		if(!array_key_exists($Class, self::$Instances))
 			self::$Instances[$Class] = new $Class;
 		
 		return self::$Instances[$Class];
 	}
+	
+	public function __clone() { }
  
  }
  ?>
