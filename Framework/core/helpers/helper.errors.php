@@ -10,7 +10,11 @@
  *		----------------------------------------------------
  *
  **********************************************************/
- 
+ /*
+ *	Función que demuestra un error con un estilo predefinido
+ *	@Parámetro: String $Title
+ *	@Parámetro: String $Message
+ */
  function Error($Title = "", $Message = "")
  {
 ?>
@@ -34,6 +38,10 @@
 	</html>
 <?php
  }
+	/*
+	*	Función de excepción
+	*	@Parámetro: Object $e
+	*/
 	function Exception($e)
 	{
 		if(is_object($e))
@@ -45,7 +53,7 @@
 			exit;
 		}
 		else
-			die("<h1>Error</h1><p>La funci&oacute;n <b>Exception()</b>debe recibir un argumento de tipo objeto</p>");
+			die(Error('Error', 'La funci&oacute;n <b>Exception($e)</b>debe recibir un argumento de tipo objeto'));
 	}
  
  ?>
