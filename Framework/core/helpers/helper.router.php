@@ -145,8 +145,7 @@
 					{
 						if(Segments() > 4)
 							$Count = 4;
-							
-						for($i = 0; $i < Segments(); $i++)
+						for($i = 0; $i <= Segments() - 1; $i++)
 						{
 							if(Segment($Count) || Segment($Count) == 0)
 							{
@@ -159,8 +158,7 @@
 					{
 						if(Segments() > 3)
 							$Count = 3;
-						
-						for($i = 0; $i < Segments(); $i++)
+						for($i = 0; $i <= Segments() - 1; $i++)
 						{
 							if(Segment($Count) || Segment($Count) == 0)
 							{
@@ -198,8 +196,7 @@
 						if(Segments() > 3)
 						{
 							$Count = 3;
-										// b <= v && TRUE && ANALYZE
-							for($i = 0; $i < Segments(); $i++)
+							for($i = 0; $i <= Segments() - 1; $i++)
 							{
 								if(Segment($Count) || Segment($Count) == 0)
 								{
@@ -214,8 +211,7 @@
 						if(Segments() > 2)
 						{
 							$Count = 2;
-										// b <= v && TRUE && ANALYZE
-							for($i = 0; $i < Segments(); $i++)
+							for($i = 0; $i <= Segments() - 1; $i++)
 							{
 								if(Segment($Count) || Segment($J) == 0)
 								{
