@@ -11,7 +11,7 @@
  *
  **********************************************************/
 	if(!DEFINED('_ACCESS'))
-		die('Error', 'No puedes acceder a este archivo directamente');
+		die(Error('Error', 'No puedes acceder a este archivo directamente'));
 		
 	/*
 	* Esta función obtiene la URI del navegador y la explota utilizando las "/"
