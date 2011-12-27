@@ -11,7 +11,7 @@
  *
  **********************************************************/
   	if(!DEFINED('_ACCESS'))
-		die("<h1>Error</h1><p>No tienes permiso para acceder aqu&iacute;</p>");
+		die(Error('Error','No tienes permiso para acceder aqu&iacute;'));
 	
  //Configuración (por medio de una definición) de la aplicación en uso
  DEFINE('DEFAULT_APPLICATION', 'default');

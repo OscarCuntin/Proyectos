@@ -15,7 +15,8 @@
 
  include ("class.singleton.php");
  
- class AsfoLoad{
+ class AsfoLoad
+ {
 	/*
 	*
 	*/

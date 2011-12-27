@@ -10,6 +10,7 @@
  *		----------------------------------------------------
  *
  **********************************************************/
+
 	if(!DEFINED('_ACCESS'))
 		die(Error('Error', 'No puedes acceder a este archivo directamente'));
 		
@@ -33,7 +34,7 @@
 			if(isset($mURL) && $mURL[0] == $Path)					  //|
 				$Vars[] = array_shift($mURL);//------------------------>|\No son los mismos
 				//Configuración											|/valores recibidos
-			if(!MOD_REWRITE && isset($mURL))							 // |
+			if(!MOD_REWRITE && isset($mURL))					     // |
 				if($mURL[0] == basename($_SERVER['SCRIPT_FILENAME']))// |
 					$Vars[] = array_shift($mURL);//-------------------->|
 		}
@@ -268,7 +269,7 @@
 				}
 			}
 		}
-		
+		//Sección para el modo mantenimiento
 		if(ACTIVE_WEB != TRUE && !_SESSION("AsfoUserID") && $App != "cpanel")
 			die(DISABLED_WEB_MESSAGE);
 		
