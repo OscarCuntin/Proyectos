@@ -11,21 +11,53 @@
  *
  **********************************************************/
 	if(!DEFINED('_ACCESS'))
-		die("<h1>Error</h1><p>No puedes acceder a este archivo directamente</p>");
-	 function Route()
+		die('Error', 'No puedes acceder a este archivo directamente');
+		
+	/*
+	* Esta función obtiene la URI del navegador y la explota utilizando las "/"
+	* @Parámetro: $r
+	* @Retorna: Array
+	*/
+	 function Route($r = FALSE)
 	 {
-	 
+		$mURL   = explode("/", substr($_SERVER['REQUEST_URI'], 1)); //mURL | m = Main | Referencia
+		$mPaths = explode("/", dirname($_SERVER['SCRIPT_FILENAME'])); //mPaths | m = Main | Referencia
+		$Path = $mPaths[count($mPaths) - 1]; // - 1 -> Evita el desbordamiento del arreglo
+		
+		if(is_array($mURL)) //¿Realmente podría no serlo?...Tengo que comprobarlo bien...
+		{
+			$mURL = array_diff($mURL, array(""));
+			
+			if(DOMAIN) //Configuración									|
+				$Vars[] = array_shift($mURL);//------------------------>|
+			if(isset($mURL) && $mURL[0] == $Path)					  //|
+				$Vars[] = array_shift($mURL);//------------------------>|\No son los mismos
+				//Configuración											|/valores recibidos
+			if(!MOD_REWRITE && isset($mURL))							 // |
+				if($mURL[0] == basename($_SERVER['SCRIPT_FILENAME']))// |
+					$Vars[] = array_shift($mURL);//-------------------->|
+		}
+		//Temporalmente el valor de "$r" debe ser predefinido Y NO CAMBIADO (funcionará para referencias futuras)
+		if($r != FALSE)
+			die(Error('Error', 'La funci&oacute;n <b>Route($r = FALSE)</b> debe recibir un valor FALSO por predefinici&oacute;n obligatoriamente'));
+		
+		return $mURL;
 	 }
 	 
-	 function Segment($Segment = 0, $r = FALSE)
+	 /*
+	 *	Esta función obtiene un segmento específico de la URI obtenida por la función Route($r = FALSE)
+	 * @Parámetro: $Segment
+	 * @Parámetro: $r 
+	 * @Retorna: Mezclado (Boolean(true/false), Array)
+	 */
+	 function Segment($Segment = 0, $r = FALSE) //En esta función $r = FALSE funciona para que la ruta siempre sea falsa si es emitida por el usuario
 	 {
 		if($r === FALSE)//FALSE === FALSE | false != FALSE
 		{
-			$route = Route();
+			$route = Route(); //Ruta obtenida de la URI en la función nombrada.
 			
 			if(count($route) > 0)
 			{
-											//To Do:Ver si hay otro método mejor para analizar la longitud de la string
 				if(isset($route[$segment]) && strlen($route[$segment]) > 0)
 				{
 					if($route[$segment] == "0")
@@ -46,9 +78,13 @@
 				return false;
 		}
 		else
-			die("<h1>Error</h1><p>La ruta (en la funci&oacute;n: <b>Segment()</b> no puede ser verdadera si no ha sido marcada</p>");
+			die(Error('Error', 'La ruta en la funci&oacute;n: <b>Segment($Segment = 0, $r = FALSE)</b> no puede ser verdadera si no ha sido marcada por el sistema'));
 	 }
-	 
+	 /*
+	 * Esta función obtiene todos los segmentos de la ruta
+	 * @Parámetro: $r
+	 * @Retorna: Entero
+	 */
 	 function Segments($r = FALSE)
 	 {
 		if($r === FALSE)
@@ -57,9 +93,14 @@
 			return count($route);
 		}
 		else
-			die("<h1>Error</h1><p>La ruta (en la funci&oacute;n: <b>Segments()</b> no puede ser verdadera si no ha sido marcada</p>");
+			die(Error('Error', 'La ruta (en la funci&oacute;n: <b>Segments($r = FALSE)</b> no puede ser verdadera si no ha sido marcada'));
 	 }
-	 
+	 /*
+	 * Esta función analiza si es un controlador un archivo
+	 * @Parámetro: $Controller
+	 * @Parámetro: $App
+	 * @Retorna: Booleano (true/false)
+	 */
 	 function isController($Controller, $App)
 	 {
 		$checkFile = WWW_PATH . DS . APPLICATION_PATH . DS . $App . DS . CONTROLLERS . DS . CONTROLLER . '.' . $Controller . '.php';
@@ -69,12 +110,15 @@
 		else
 			return false;
 	 }
-	 
+	 /*
+	 *	Esta función ejecuta todo el sistema
+	 */
 	 function Execute()
 	 {
 		global $Load;
-		//To Do: Ver si es mejor hacerlas globales...
-		$controlApp = FALSE; /* --- */ $Match = FALSE;
+		$controlApp = FALSE; 
+		/* --- */ 
+		$Match = FALSE;
 		
 		//Ruta visual: "www/config/config.routes.php"
 		if(FILE_EXISTS(WWW_PATH . DS . 'config' . DS . 'config.routes.php'))
@@ -225,7 +269,7 @@
 			}
 		}
 		
-		if(ACTIVE_WEB !== TRUE && !_SESSION("AsfoUserID") && $App !== "cpanel")
+		if(ACTIVE_WEB != TRUE && !_SESSION("AsfoUserID") && $App != "cpanel")
 			die(DISABLED_WEB_MESSAGE);
 		
 		$Load ->  App($App);
@@ -316,7 +360,7 @@
 				$_Controller -> index();
 		}
 		else
-			die("<h1>Error</h1><p>Al parecer un controlador (o m&aacute;s) no pudo ser cargado, comprueba que los archivos est&eacute;n conforme al formato correcto y tengan los nombres correctos</p>");
+			die(Error('Error', 'Al parecer un controlador (o m&aacute;s) no pudo ser cargado, comprueba que los archivos est&eacute;n conforme al formato correcto y tengan los nombres correctos'));
 	 }
 	
 //EOF

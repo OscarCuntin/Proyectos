@@ -32,4 +32,11 @@ DEFINE('CONTROLLERS', 'controllers');
 
 //Configuración (por medio de una definición) para el nombre inicial del archivo del controlador (controller.nombre.php)
 DEFINE('CONTROLLER', 'controller');
+
+//Configuración (por medio de una definición) para saber si se está utilizando el dominio
+DEFINE('DOMAIN', FALSE);
+
+//Configuración (por medio de una definición) para las URLs amigables (Para un mejor funcionamiento, se debe dejar como "TRUE")
+//Posiblemente se elimine esta configuración para hacerla predefinida como TRUE y que siempre se base en URLs amigables
+DEFINE('MOD_REWRITE', TRUE);
 ?>
