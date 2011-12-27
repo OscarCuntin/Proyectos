@@ -12,7 +12,7 @@
  **********************************************************/
  
  //Definición de la versión del Framework
- DEFINE('CORE_VERSION', '0.0.2');
+ DEFINE('CORE_VERSION', '0.0.3');
  
  //Definición de seguridad
  DEFINE('_ACCESS', TRUE);
