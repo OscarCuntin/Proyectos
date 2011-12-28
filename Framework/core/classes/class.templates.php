@@ -11,8 +11,10 @@
  *
  **********************************************************/
  
+ include('../helpers/helper.errors.php');
+ 
 	if(!DEFINED('_ACCESS'))
-		die(Error("Error", "No puedes acceder a este archivo directamente"));
+		die(Error('Error', 'No puedes acceder a este archivo directamente'));
 	
 class AsfoTemplates extends AsfoLoad
 {
@@ -63,7 +65,7 @@ class AsfoTemplates extends AsfoLoad
 	
 	public function getTitle($ExtraTitle = NULL)
 	{
-		if(is_null($ExtraTitle)
+		if(is_null($ExtraTitle))
 			return WEB_NAME; //Configuración
 		else
 			return WEB_NAME . '-' . $ExtraTitle; //Configuración - Título Extra
@@ -71,7 +73,7 @@ class AsfoTemplates extends AsfoLoad
 	
 	public function isTheme()
 	{
-	
+		
 	}
 	
 	public function Load()
