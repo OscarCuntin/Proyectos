@@ -11,7 +11,7 @@
  *
  **********************************************************/
   	if(!DEFINED('_ACCESS'))
-		die(Error('Error','No tienes permiso para acceder aqu&iacute;'));
+		die("<h1>Error</h1><p>No puedes acceder a este archivo directamente.</p>");
 	
  //Configuración (por medio de una definición) de la aplicación en uso
  DEFINE('DEFAULT_APPLICATION', 'default');

@@ -13,7 +13,7 @@
  
  //Se denega el acceso a este archivo
  if(!DEFINED('_ACCESS'))
-	die("<h1>Error</h1><p>No tienes permiso para acceder aqu&iacute;</p>");
+	die("<h1>Error</h1><p>No puedes acceder a este archivo directamente.</p>");
 	
 //Configuración (por medio de una definición) del nombre de la carpeta de la aplicación [Obligatoria]
 DEFINE('CORE_PATH', 'core');

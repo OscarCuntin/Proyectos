@@ -9,8 +9,6 @@
 | modificadas por el usuario.
 | -Agregar documentación interna
 | -Agregar seguridad a todos los archivos.
-| -Mandar al demonio todos los die(...); y agregar
-| la nueva función Error($Title, $Message); 
 | -Crear un archivo para que el usuario pueda 
 | modificarlo y crear su propio código para "Debug"
 | o pueda utilizarlo como "predefinido"

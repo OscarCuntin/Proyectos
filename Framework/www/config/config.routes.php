@@ -11,7 +11,7 @@
  *
  **********************************************************/
 	if(!DEFINED('_ACCESS'))
-		die("<h1>Error</h1><p>No tienes permiso para acceder aqu&iacute;</p>");
+		die("<h1>Error</h1><p>No puedes acceder a este archivo directamente.</p>");
 	
 	$Routes = array(
 		0 => array(
