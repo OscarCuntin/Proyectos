@@ -10,8 +10,10 @@
  *		----------------------------------------------------
  *
  **********************************************************/
-   if(!DEFINED('_ACCESS'))
-	die("<h1>Error</h1><p>No puedes acceder a este archivo directamente</p>");
+   include('helper.errors.php');
+	
+	if(!DEFINED('_ACCESS'))
+		die(Error('Error', 'No puedes acceder a este archivo directamente'));
 	
 	/*
 	* Analiza el momento en que arrancará el sistema.

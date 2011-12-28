@@ -11,4 +11,8 @@
  *
  **********************************************************/
  
+	include('helper.errors.php');
+	
+	if(!DEFINED('_ACCESS'))
+		die(Error('Error', 'No puedes acceder a este archivo directamente'));
  ?>

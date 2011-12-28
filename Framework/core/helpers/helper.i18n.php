@@ -10,8 +10,10 @@
  *		----------------------------------------------------
  *
  **********************************************************/
- 	if(!DEFINED('_ACCESS'))
-		die("<h1>Error</h1><p>No tienes permiso para acceder aqu&iacute;</p>");
+ 	include('helper.errors.php');
+	
+	if(!DEFINED('_ACCESS'))
+		die(Error('Error', 'No puedes acceder a este archivo directamente'));
 	
 	 function isLang($Language = FALSE) {
 		if(!$Language) 
