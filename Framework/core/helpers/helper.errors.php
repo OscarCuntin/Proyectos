@@ -17,13 +17,22 @@
  */
  function Error($Title = "", $Message = "")
  {
+	if(!DEFINED('CORE_PATH'))
+		DEFINE('CORE_PATH', 'core');
+	if(!DEFINED('DS'))
+		DEFINE('DS', DIRECTORY_SEPARATOR);
+	if(!DEFINED('URL'))
+	{
+		$mURL = explode('/', $_SERVER['REQUEST_URI']);
+		DEFINE('URL', 'http://'.$_SERVER['SERVER_NAME']. DS .$mURL[1]);
+	}
 ?>
 	<!DOCTYPE html>
 	<html lang="en">
 		<head>
 			<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 			<title><?php print $Title; ?></title>
-			<link rel="stylesheet" href="<?php print CORE_PATH . DS . 'pages' . DS . 'error.css'; ?>" type="text/css" />
+			<link rel="stylesheet" href="<?php print URL . DS . CORE_PATH . DS . 'pages' . DS . 'error.css'; ?>" type="text/css" />
 		</head>
 
 		<body>
