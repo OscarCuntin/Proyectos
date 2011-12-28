@@ -11,5 +11,7 @@
  *
  **********************************************************/
  
- 
+ 	if(!DEFINED('_ACCESS'))
+		die("<h1>Error</h1> No puedes acceder a este archivo directamente");
+	
 ?>

@@ -43,14 +43,17 @@ if(!DEFINED('CORE_PATH'))
 	die("<h1>Error</h1><p>La configuraci&oacute;n <b>CORE_PATH</b> no est&aacute; definida</p>");	
 
 include CORE_PATH . DS . 'classes' . DS . 'class.load.php';
-include CORE_PATH . DS . 'classes' . DS . 'class.controller.php';
-include CORE_PATH . DS . 'classes' . DS . 'class.model.php';	
 
 $Load = new AsfoLoad();
 
 $Helpers = array('i18n', 'router', 'benchmark', 'string', 'sessions', 'security', 'errors');
 
 $Load -> Helper($Helpers);
+
+
+include CORE_PATH . DS . 'classes' . DS . 'class.controller.php';
+include CORE_PATH . DS . 'classes' . DS . 'class.model.php';	
+
 
 //Si la versión de PHP es menor a la 5.1.0 el sistema no funcionará correctamente.
 if(!version_compare(PHP_VERSION, "5.1.0", ">="))
