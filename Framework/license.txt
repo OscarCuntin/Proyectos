@@ -1,0 +1,15 @@
+#English Section
+Copyright (C) 2011 Asfo, Inc.
+
+All rights reserved
+
+This license is a legal agreement between you and Asfo, Inc. for the use of Asfo Framework (the "Software"). 
+By obtaining the Software you agree to comply with the terms and conditions of this license.
+
+#Spanish Section
+Copyright (C) 2011 Asfo, Inc.
+
+Todos los derechos reservados
+
+Esta licencia es un acuerdo legal entre tu y Asfo, Inc. por el uso de Asfo Framework (the "Software").
+Al obtener el Software, estás de acuerdo con cumplir con los términos y condiciones de esta licencia.
