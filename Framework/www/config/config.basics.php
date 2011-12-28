@@ -21,4 +21,7 @@
  
  //Configuración (por medio de una definición) del mensaje a mostrar en caso de que esté en construcción la web/aplicación
  DEFINE('DISABLED_WEB_MESSAGE', '<h1>En Construcci&oacute;n</h1><p>Esta web se encuentra en construcci&oacute;n, vuelva m&aacute;s tarde</p>');
+ 
+ //Configuración (por medio de una definición) del nombre de la web
+ DEFINE('WEB_NAME', 'Asfo Framework');
 ?>
