@@ -11,7 +11,7 @@
  *
  **********************************************************/
  
- DEFINE('CORE_VERSION', '0.0.1.82');
+ DEFINE('CORE_VERSION', '0.0.1.83');
  
  DEFINE('ERROR_REPORTING_CONFIG', E_ALL);
  
