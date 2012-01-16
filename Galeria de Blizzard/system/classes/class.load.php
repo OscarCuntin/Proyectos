@@ -18,6 +18,8 @@
  {
  
 	public $Page;
+	
+	private static $Instances = array();
 	/*
 	*	Constructor
 	*/
@@ -58,6 +60,23 @@
 		else
 			die("<h1>Error 105</h1><p>El archivo de lenguajes <b>language.".$Language.".php</b> no existe. <br />La ruta representada es: <b>".SYSTEM_PATH . DS . 'languages' . DS . "language.".$Language.".php</b></p><hr /><i>Galer&iacute;a de Blizzard por <b>Asfo</b> &copy; 2011 | Sistema de Errores | Error 105</b>");
 
+	}
+	
+	public function Instance($Class)
+	{
+		if(!array_key_exists($Class, self::$Instances))
+			self::$Instances[$Class] = new $Class;
+		
+		return self::$Instances[$Class];
+	}
+	
+	public function Classes($Class)
+	{
+		$File = SYSTEM_PATH . DS . 'classes' . DS . 'class.'.strtolower($Class).'.php';
+		if(FILE_EXISTS($File))
+			include $File;
+		else	//Poner el error 105 bien
+			die("Error 105");
 	}
 	
 	public function getTemplate($Template = 'default', $File = FALSE)
