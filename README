@@ -2,14 +2,15 @@
 *** PROYECTOS ***
 ========================================================================
 *** PROYECTOS ACTIVOS ***
-|- UPA
-|- iNotas
-|- Framework
+|- Galería de Blizzard
 ========================================================================
 *** PROYECTOS INACTIVOS ***
-|- Control de Supermercado 
-|- MEXME
-|- Mists of Pandaria Site
+|- Control de Supermercado [Permanentemente]
+|- UPA [Permanentemente]
+|- iNotas [Temporal hasta conocer que alguien lo usa]
+|- Framework [Cambio de Repo | Continua]
+|- MEXME [Permanentemente]
+|- Mists of Pandaria Site [Permanentemente]
 ========================================================================
 *** INFORMACIÓN DE LOS PROYECTOS ***
 |- Control de Supermercado:
@@ -35,6 +36,11 @@
 |- Framework
 |--- Este proyecto es la creación de una área de trabajo para agilizar
 |--- el desarrollo de aplicaciones y páginas web.
+|- Galería de Blizzard
+|--- Este proyecto es el tomar la galería actual de blizzard y emularla
+|--- de una forma sencilla y adaptable. Además de URL's amigables (SEO),
+|--- fácil control en ella, segura, eficaz, editable, configurable
+|--- y multi-lenguajes. 
 ========================================================================
 *** LICENCIA ****
 |- Todos los proyectos son liberados bajo la licencia GPL v2

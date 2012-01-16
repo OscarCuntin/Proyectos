@@ -1,0 +1,128 @@
+﻿/*	CSS Document - Blizzard Entertainment 2008  */
+
+
+
+/* Art Gallery :: Fan Art, Concept Art */
+
+.blizzart-gallery {padding:0 16px 18px 17px; min-height:297px;}
+
+.blizzart-gallery .searches {background:url(../_images/layout/gap-bottom-bg.gif) 50% 46px no-repeat; height:79px;}
+.blizzart-gallery .searches .sort_opt_pos a {cursor:pointer;}
+.gallery-filter {display:none; height:33px; margin-top:17px; float:left; cursor:pointer;}
+.gallery-filter a {display:block;}
+.gallery-filter .filterbox { font-size: 11px; font-family:Arial, Helvetica, sans-serif, sans-serif; margin: 0 0 0 0; height: 32px; width:auto;}
+.gallery-filter .filterbox .left {width: 8px; height: 32px;  background: url(../_images/layout/subpagepath-bgl.gif); background-position: top left; background-repeat: no-repeat; float: left;}
+.gallery-filter .filterbox .right {width: 8px; height: 32px;  background: url(../_images/layout/subpagepath-bgr.gif); background-position: top left; background-repeat: no-repeat; float: left;}
+.gallery-filter .filterbox .center {height: 32px; background: url(../_images/layout/subpagepath-bg.gif); background-position: top left; background-repeat: repeat-x; float: left; display: block;}
+.gallery-filter .filterbox .center .contents { padding: 8px 8px 0 0;text-transform:uppercase; text-align:left;}
+.gallery-filter .filterbox .center .contents a.filter-selector .arrow { width: 11px; height: 14px; display: block; float: left; background: url(../_images/layout/subpagepath-arrows-blue.png) top left no-repeat; margin: 0 8px 0 2px;}
+.gallery-filter .filterbox .center .contents a.filter-selector:hover .arrow { width: 11px; height: 14px; display: block; float: left; background: url(../_images/layout/subpagepath-arrows-white.png) top left no-repeat; margin: 0 8px 0 2px;}
+.gallery-filter .filterbox .center .contents a.filter-selector .filter {color: #82B8CB; display: block; float: left; margin: 0 7px 0 0;}
+.gallery-filter .filterbox .center .contents a.filter-selector:hover .filter {color: #FFF; }
+.gallery-filter #sort_opt {left: 0; white-space:nowrap; z-index:11;}
+.gallery-filter .filterparam { display:inline; font-weight:normal;}
+
+.blizzart-gallery .search {width:263px; height:33px;float:right; background:url(../_images/layout/bg-artsearch-bg.gif) 0 0 repeat-x; margin:16px -2px 0 0; position:relative;}
+.blizzart-gallery .search  .left {width:263px; height:33px; background:url(../_images/layout/bg-artsearch-left.gif) top left no-repeat;}
+.blizzart-gallery .search  .right {width:263px; height:33px; background:url(../_images/layout/bg-artsearch-right.gif) top right no-repeat;}
+.blizzart-gallery .search input {margin:8px 0 0 6px; display:block; border:0; width:215px; color:#00b2f1; background-color:transparent; font:bold 13px Arial, Helvetica, sans-serif;}
+.blizzart-gallery .search a.cancel {display:none; width:31px; height:31px; background-color:#1c1701; position:absolute; top:1px; right:0; background:url(../_images/layout/gallery-search-x.gif) 0 0 no-repeat; cursor:pointer;}
+.blizzart-gallery .search a:hover.cancel {background-position:0 100%;}
+.blizzart-gallery .search.activated a.cancel {visibility:visible;}
+.blizzart-gallery .search.activated input {font-weight:bold;}
+
+.blizzart-gallery .message p {width:100%; margin:61px 0; text-align:center; font-size:17px; font-weight:bold;}
+.blizzart-gallery .message .error {width:100%; margin-top:55px; margin-bottom:60px; text-align:center; font-size:13px;}
+.blizzart-gallery .message .error big {display:block; color:white; margin-bottom:10px; font-size:27px; font-weight:bold;}
+
+.blizzart-gallery .pictures {clear:both; margin:0 auto; overflow:hidden;}
+.blizzart-gallery .pictures .picture {float:left; margin:0 4px 10px 4px;}
+.blizzart-gallery .pictures .picture a {position:relative;margin:0 auto; display:block; background:url(../_images/layout/loading.gif) #000 50% 50% no-repeat; border: 1px solid #0a749e;}
+.blizzart-gallery .pictures .picture a img {width:100%; height:100%;}
+.blizzart-gallery .pictures .picture a div {position:absolute; top:0; left:0; z-index:10; cursor:pointer;}
+.blizzart-gallery .pictures .picture span.name {display:block; text-align:center; color:#82b8cb; white-space:nowrap; overflow:hidden; font:12px Calibri, Arial, Helvetica, sans-serif; line-height:2em;}
+.blizzart-gallery .pictures.small {width:900px;}
+.blizzart-gallery .pictures.medium {width:880px;}
+.blizzart-gallery .pictures.large {width:930px;}
+.blizzart-gallery .pictures.small .picture {width:172px;}
+.blizzart-gallery .pictures.medium .picture {width:212px;}
+.blizzart-gallery .pictures.large .picture {width:302px;}
+.blizzart-gallery .pictures.small .picture a {width:170px; height:100px;}
+.blizzart-gallery .pictures.medium .picture a {width:210px; height:140px;}
+.blizzart-gallery .pictures.large .picture a {width:300px; height:210px;}
+.blizzart-gallery .pictures.small .picture a:hover div {background:url(../_images/layout/ss_zoom_t170x100.png) 50% 50% no-repeat; width:170px; height:100px;}
+.blizzart-gallery .pictures.medium .picture a:hover div {background:url(../_images/layout/ss_zoom_t210x140.png) 50% 50% no-repeat; width:210px; height:140px;}
+.blizzart-gallery .pictures.large .picture a:hover div {background:url(../_images/layout/ss_zoom_t300x210.png) 50% 50% no-repeat; width:300px; height:210px;}
+
+.blizzart-gallery .tip {display:block; float:left; white-space:nowrap; font-size:12px; line-height:32px; height:24px;  margin: 0 0 0 10px;}
+
+.blizzart-gallery .top_pagenav {clear:both; text-align:center; width:100%; margin-left:2px;height: 72px; background:url(../_images/layout/gap-bg.gif) top center no-repeat;}
+.blizzart-gallery .top_pagenav #prevpg_top {width: 167px; height: 41px; display: block; background:url(../_images/layout/btn-arrow-left.jpg) top left no-repeat; float: left; cursor: pointer;  }
+.blizzart-gallery .top_pagenav #prevpg_top:hover { background-position: bottom left; color: #FFF;}
+.blizzart-gallery .top_pagenav #prevpg_top span {width: 145px; display: block; float: right; text-align: center; padding: 13px 0 0 0;}
+.blizzart-gallery .top_pagenav #nextpg_top {width: 167px; height: 41px; display: block; background:url(../_images/layout/btn-arrow-right.jpg) top left no-repeat; float: right; cursor: pointer; }
+.blizzart-gallery .top_pagenav #nextpg_top:hover { background-position: bottom left; color: #FFF;}
+.blizzart-gallery .top_pagenav #nextpg_top span {width: 145px; display: block; float: left; text-align: center; padding: 13px 0 0 0;}
+.blizzart-gallery .top_pagenav #prevpg_top.nodisplay, .blizzart-gallery .top_pagenav #nextpg_top.nodisplay {display:none !important;}
+.blizzart-gallery .top_pagenav .fn_submit { height: 72px; display: block; margin: 0 auto;}
+.blizzart-gallery .top_pagenav .fn_submit span {display: block; padding: 8px 0 0 0; margin: 0 auto;}
+
+
+.blizzart-gallery .pages {overflow:hidden; clear:both; text-align:center;  width:936px; background:url(../_images/layout/gap-bottom-bg.gif) top center no-repeat; margin:0 auto; padding: 32px 0 10px 0; }
+.blizzart-gallery .pages .numbers {margin-right:7px;}
+.blizzart-gallery .pages .numbers, .blizzart-gallery .pages a#gotopg {float:right;}
+.blizzart-gallery .pages .numbers span, .blizzart-gallery .pages .numbers a, .blizzart-gallery .pages .numbers div {float:left;	display:block;}
+.blizzart-gallery .pages .numbers span {padding:1px 0; margin:0 5px;}
+.blizzart-gallery .pages .numbers #prevpg {background:url(../_images/layout/btn-arrow-prev.gif) 0 0 no-repeat; width:28px; height:44px; padding:0;}
+.blizzart-gallery .pages .numbers #nextpg {background:url(../_images/layout/btn-arrow-next.gif) 0 0 no-repeat; width:28px; height:44px; padding:0;}
+.blizzart-gallery .pages .numbers #prevendpg {background:url(../_images/layout/btn-arrow-prevend.gif) 0 0 no-repeat; width:28px; height:44px; padding:0;}
+.blizzart-gallery .pages .numbers #nextendpg {background:url(../_images/layout/btn-arrow-nextend.gif) 0 0 no-repeat; width:28px; height:44px; padding:0;}
+
+.blizzart-gallery .pages .numbers #prevpg:hover, .blizzart-gallery .pages .numbers #nextpg:hover, .blizzart-gallery .pages .numbers #nextendpg:hover, .blizzart-gallery .pages .numbers #prevendpg:hover {background-position:0 100%;}
+.blizzart-gallery .pages .numbers a.disabled:hover {background-position:0 0 !important; cursor:default !important; color:#03b2f1 !important;}
+.blizzart-gallery .pages .numbers div {margin-top:5px;}
+.blizzart-gallery .pages .numbers div span {font-size:11px; font-weight:bold; color:#fff;line-height:25px;}
+.blizzart-gallery .pages .numbers div a {background:url(../_images/layout/paging-bg.gif) 0 0 no-repeat; font-size:11px; font-weight:bold; color:#fff; width:32px; height:32px; line-height:32px; letter-spacing:-.08em; margin:0 1px; text-align:center; text-decoration:none;}
+.blizzart-gallery .pages .numbers div a:hover {background-position:0 100%;}
+.blizzart-gallery .pages .numbers div a.selected, .blizzart-gallery .pages .numbers a.selected:hover {background:url(../_images/layout/paging-bg-selected.gif) 0 0 no-repeat; cursor:default;}
+.blizzart-gallery .pages .numbers a.disabled, .blizzart-gallery .pages .numbers a.disabled:hover {}
+.blizzart-gallery .pages a#gotopg {display:block; padding:0; margin:10px 5px 0 0;}
+.blizzart-gallery .pages a#gotopg span {display:block; cursor:pointer;width:24px;	height:24px; background:url(../_images/layout/icon-search.gif) 0 0 no-repeat;}
+.blizzart-gallery .pages a.disabled {display:none !important;}
+
+.blizzart-gallery .thumbsize {clear:both; width:100%; text-align:center; padding-top:10px;}
+.blizzart-gallery .thumbsize a {margin: 0 5px;}
+.blizzart-gallery .thumbsize a.selected {font-weight:bold; color:#fff; cursor:default;}
+.blizzart-gallery .thumbsize span {padding: 0 15px 0 0; color: #6F8594; font-size: 11px; text-transform: uppercase;}
+
+
+
+/*** Viewer ***/
+
+#ilovesc-viewer-overlay {position:absolute;	z-index:9150; display:none;	left:0;	top:0; width:100%; background-color:#000000; opacity:0.7; }
+#ilovesc-viewer {display:none;}
+#ilovesc-viewer-outer {position:absolute; z-index:9151;	width:1px; height:1px; left:50%;}
+#ilovesc-viewer-container {position:absolute; top:0; background-color:white;}
+#ilovesc-viewer-x {position:absolute; width:36px; height:36px; right:0;	top:0; background:white url(../_images/ilovesc/lightbox-x.html) center center no-repeat;	z-index:9159; cursor:pointer;}
+#ilovesc-viewer-drag, #ilovesc-viewer-map {position:absolute; left:10px; top:10px;}
+#ilovesc-viewer-drag {z-index:9155;	cursor:url(http://us.blizzard.com/_images/ilovesc/cursor-hand-open.cur), default;}
+#ilovesc-viewer-drag.dragged {cursor:url(http://us.blizzard.com/_images/ilovesc/cursor-hand-closed.cur), default;}
+#ilovesc-viewer-map {z-index:9152; background:url(../_images/ilovesc/viewer-background.html); overflow:hidden;}
+#ilovesc-viewer-tiles {position:absolute; left:0; top:0;}
+#ilovesc-viewer-map img {display:block; position:absolute; background-color:black;}
+#ilovesc-viewer-minimap {position:absolute;	z-index:9158; left:10px; bottom:10px; background:red; border-right:5px solid white; border-top:5px solid white; overflow:hidden;	background:black url(../_images/ilovesc/viewer-background-darker.html);	cursor:url(http://us.blizzard.com/_images/ilovesc/cursor-hand-closed.cur), default; /* PRELOAD */}
+#ilovesc-viewer-location {position:absolute; left:10px;	top:10px; font-size:1px; background:lightblue; border:2px solid blue; opacity:0.666; z-index:9168; cursor:move;}
+#ilovesc-viewer-minitarget {position:absolute; z-index:9165; cursor:pointer;}
+#ilovesc-viewer-minitiles {position:absolute; left:0; top:0; z-index:9163;}
+#ilovesc-viewer-minitiles img {display:block; position:absolute;}
+
+
+
+/* Fiatlux styles */
+
+#blackDrop {position:absolute; z-index:9150; display:none; top:0; width:100%; left:0; background-color:#000000; opacity:0.7; }
+#lightBoxRoot {visibility:hidden; position:absolute; z-index:9151; top:50px; left:100px;}
+#cornerFour {padding:10px;}
+#lightBoxHolder {background:transparent; padding:0; cursor:pointer; position: relative}
+/*#lightBoxX { position: absolute; display: block; width: 36px; height: 36px; right: -10px; top: -10px; background: white url(/images/layout/lightbox-x.gif) center center no-repeat }*/
+
