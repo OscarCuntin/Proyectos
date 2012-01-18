@@ -19,6 +19,8 @@
  
 	public $Page;
 	
+	public $secondaryPage;
+	
 	private static $Instances = array();
 	/*
 	*	Constructor
@@ -30,6 +32,11 @@
 			$this -> Page = $_GET['page']; //Se obtiene la página
 		else //Si en la URL ?page='' no tiene contenidos, será el valor 'index'
 			$this -> Page = 'index'; //Sin embargo, en la función getPage() se sabrá si en realidad lo es...
+		
+		if(isset($_GET['section']) && $_GET['section'] != "")
+			$this -> secondaryPage = $_GET['section'];
+		else
+			$this -> secondaryPage = '';
 	}
 	
 	/*
@@ -51,6 +58,19 @@
 			return $this -> Page = 'register';
 		else
 			return $this -> Page = '404';
+	}
+	
+	public function getSecondaryPage()
+	{
+		return $this -> secondaryPage;
+	}
+	
+	public function getLogin()
+	{
+		if(isset($_POST['usuario']) && isset($_POST['contrasena']))
+			return 'successful';
+		else
+			return 'failure';
 	}
 	
 	public function getLanguage($Language = 'es')

@@ -32,6 +32,22 @@
 		case 'ENVIAR_AQUI': return 'Env&iacute;ala aqu&iacute;'; break;
 		case 'ERROR_INICIO_DE_SESION_REQUERIDO': return 'Necesitas <a href="'.WEB_URL.'login/">iniciar sesi&oacute;n</a> para poder subir im&aacute;genes'; break;
 		case 'SIN_IMAGENES': return 'No hay im&aacute;genes a&uacute;n, <b>se el primero</b> en subir una...'; break;
+		case 'REGISTRATE': return 'reg&iacute;strate'; break;
+		case 'AQUI': return 'aqu&iacute;'; break;
+		case 'MENSAJE_REGISTRO': return 'Reg&iacute;strate utilizando el formulario siguiente:'; break;
+		case 'NOMBRE_USUARIO': return 'Nombre de usuario'; break;
+		case 'CONTRASENA': return 'Contrase&ntilde;a'; break;
+		case 'EMAIL': return 'Correo Electr&oacute;nico'; break;
+		case 'REPETIR_CONTRASENA': return 'Repite tu contrase&ntilde;a'; break;
+		case 'ENVIAR': return 'Enviar'; break;
+		case 'REINICIAR': return 'Reiniciar'; break;
+		case 'ERROR': return 'Error'; break;
+		case 'CAMPOS_REQUERIDOS': return 'Debes rellenar todos los campos'; break;
+		case 'EXITO': return '&Eacute;xito'; break;
+		case 'CONTRASENAS_DIFERENTES': return 'Las contrase&ntilde;as no coinciden'; break;
+		case 'NOMBRE_USUARIO_EN_USO': return 'El nombre de usuario est&aacute; en uso'; break;
+		case 'EMAIL_EN_USO': return 'El correo electr&oacute;nico est&aacute; en uso'; break;
+		default: return 'Frase desconocida'; break;
 	}
 	
   }

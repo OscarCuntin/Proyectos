@@ -19,18 +19,24 @@ class Database extends Load
 	
 	public $Conexion;
 	
+	public $Database;
+	
 	public function __construct()
 	{
 	
 	}
 	
 	public function Connect()
-	{
-																				//Poner un error específico
+	{																		//Poner error específico relacionado a la base de datos
 		$this -> Conexion = @mysql_connect(DB_HOST, DB_USER, DB_PASS) or die ("Error de conexi&oacute;n");
 	}
 	
 	public function SelectDB($DB)
+	{															//Poner error específico relacionado a la base de datos
+		$this -> Database = @mysql_select_db(DB_NAME) or die ("Error en la selecci&oacute;n de la base de datos");
+	}
+	
+	public function Query($Query = NULL)
 	{
 	
 	}

@@ -24,6 +24,9 @@
  else
 	die("<h1>Error 105</h1><p>El archivo de clases <b>class.load.php</b> no existe. <br />La ruta representada es: <b>".SYSTEM_PATH . DS . 'classes' . DS . "class.main.php</b></p><hr /><i>Galer&iacute;a de Blizzard por <b>Asfo</b> &copy; 2011 | Sistema de Errores | Error 105</b>");
 
+ ob_start();
+ session_start();
+ 
  $Load = new Load();
  
  $Load -> getLanguage(MAIN_LANGUAGE);
@@ -45,7 +48,23 @@
 		$Load -> getTemplate(MAIN_TEMPLATE, 'footer');
 		break;
 	case 'login':
-		
+		switch($Load -> getLogin())
+		{
+			case 'successful':
+				break;
+			case 'failure':
+				$Load -> getTemplate(MAIN_TEMPLATE, 'head');
+				$Load -> getTemplate(MAIN_TEMPLATE, 'header');
+				$Load -> getTemplate(MAIN_TEMPLATE, 'login');
+				$Load -> getTemplate(MAIN_TEMPLATE, 'footer');
+				break;
+			default:
+				$Load -> getTemplate(MAIN_TEMPLATE, 'head');
+				$Load -> getTemplate(MAIN_TEMPLATE, 'header');
+				$Load -> getTemplate(MAIN_TEMPLATE, 'login');
+				$Load -> getTemplate(MAIN_TEMPLATE, 'footer');
+				break;
+		}
 		break;
 	case 'logout':
 		
@@ -59,6 +78,7 @@
 	case 'register':
 		$Load -> getTemplate(MAIN_TEMPLATE, 'head');
 		$Load -> getTemplate(MAIN_TEMPLATE, 'header');
+		$Load -> getTemplate(MAIN_TEMPLATE, 'register');
 		$Load -> getTemplate(MAIN_TEMPLATE, 'footer');
 		break;
 	case 'index':

@@ -1,19 +1,3 @@
-<?php
-/***********************************************************
- *	
- *		Galería de Blizzard
- * 		----------------------------------------------------
- *		Autor		:	Asfo Zavala
- *		Copyright	: 	Copyright (C) 2012, Asfo Zavala
- *		Licencia	:	GNU GPL v3
- *		Link		: 	http://github.com/Asfo/
- *		----------------------------------------------------
- *
- **********************************************************/
- //Acceso denegado a la visualización del archivo directamente.
- if(!DEFINED('ACCESS'))
-	die("<h1>Error 403</h1><p>No tienes los permisos suficientes para acceder a este archivo.</p><hr /><i>Galer&iacute;a de Blizzard por <b>Asfo</b> &copy; 2011 | Sistema de Seguridad | <b>Error 403</b>");
-?>
 			<div class="landingcontents">
 				<div class="holder">
 	<div class="breadcrumb breadcrumbsub">
@@ -55,7 +39,7 @@
 						if(isset($_SESSION['userId']) && $_SESSION['userId'] != "")
 							echo "<span>".LANG('MENSAJE_ENVIO_IMAGEN') . "<a href=\"upload/\"> " . LANG('ENVIAR_AQUI') . "</a>.</span>";
 						else
-							echo "<a href=\"login/\">".LANG('MENSAJE_INICIAR_SESION')."</a> ". LANG('MENSAJE_INICIAR_SESION_ADICIONAL') . " o " . LANG('REGISTRATE') . " <a href=\"register/\">".LANG('AQUI')."</a>";
+							echo "<a href=\"login/\">".LANG('MENSAJE_INICIAR_SESION')."</a> ". LANG('MENSAJE_INICIAR_SESION_ADICIONAL');
 					?>
 				</div>
 			</div>
@@ -64,7 +48,7 @@
 
 			<div id="gallery-pictures" class="pictures">
 				<?php
-					echo LANG('SIN_IMAGENES');
+
 				?>
 			</div>
 

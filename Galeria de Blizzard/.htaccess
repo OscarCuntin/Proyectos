@@ -1,4 +1,5 @@
 <IfModule mod_rewrite.c>
   RewriteEngine on
-  RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/?$ index.php?page=$1&section=$2 [L,QSA]
+  #To Do: Modificar esta regla...
+  RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)/?$ index.php?page=$1&section=$2&value=$3 [L,QSA]
 </IfModule>
